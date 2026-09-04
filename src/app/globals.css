@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand palette — extracted from the Ranco Dental logo */
+  --color-navy: #043552; /* hero bg, form band, footer */
+  --color-teal: #0cb9d3; /* buttons, icons, links */
+  --color-sky: #79d2ed; /* headline accent word, small badges */
+  --color-tint: #ecf7f8; /* light section backgrounds */
+  --color-teal-dark: #08626f; /* labels/text on tint bg */
+  --color-ink: #4b4b4b; /* body copy on white */
+  --color-muted-navy: #b9d6e2; /* body copy on navy sections */
+
+  --background: #ffffff;
+  --foreground: var(--color-ink);
+
+  --font-serif: var(--font-figtree);
+  --font-sans: var(--font-noto-sans);
+}
+
+@theme inline {
+  --color-navy: var(--color-navy);
+  --color-teal: var(--color-teal);
+  --color-sky: var(--color-sky);
+  --color-tint: var(--color-tint);
+  --color-teal-dark: var(--color-teal-dark);
+  --color-ink: var(--color-ink);
+  --color-muted-navy: var(--color-muted-navy);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Two-tier container system used across every section.
+   - .container-fluid : wide edge-to-edge sections (header, hero, banded backgrounds)
+   - .container        : standard content width */
+.container-fluid {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-inline: 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: 10px;
+}
+
+@media (min-width: 640px) {
+  .container-fluid,
+  .container {
+    padding-inline: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-fluid,
+  .container {
+    padding-inline: 30px;
+  }
+}
+
+/* Standard vertical rhythm between sections. */
+.section {
+  padding-block: 64px;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-block: 96px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+/* One deliberate motion moment: counters animating up + hero image cross-fade. */
+@keyframes crossfade {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes whatsapp-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
