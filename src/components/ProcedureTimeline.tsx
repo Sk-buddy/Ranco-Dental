@@ -148,7 +148,7 @@ export default function ProcedureTimeline({ steps }: { steps: Step[] }) {
                 </span>
 
                 <div className="relative z-20 -mt-3 rounded-2xl bg-white p-5 pt-7 text-center shadow-[0_20px_45px_-20px_rgba(15,35,65,0.28)] ring-1 ring-black/[0.04] sm:p-6 sm:pt-8">
-                  <h3 className="text-[15px] font-semibold text-[var(--color-navy)]">{step.title}</h3>
+                  <h3 className="text-[17px] font-semibold text-[var(--color-navy)]">{step.title}</h3>
                   <p className="mt-2 text-[13px] leading-[1.7] text-[var(--color-ink)]">{step.description}</p>
                 </div>
               </div>
