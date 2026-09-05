@@ -137,38 +137,84 @@ export default function TreatmentTemplate({ treatment }: { treatment: Treatment 
         </div>
       </section>
 
-      {/* Procedure — a connected timeline with tooth-themed icons per step */}
+      {/* Procedure — cards floating along a flowing connector line */}
       {procedure && procedure.length > 0 && (
         <section className="bg-white py-16 sm:py-24">
           <div className="container">
-            <h2 className="text-[24px] font-bold leading-[1.2] text-[var(--color-navy)] sm:text-[30px]">
-              How is {shortName} Performed?
-            </h2>
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="text-[24px] font-bold leading-[1.2] text-[var(--color-navy)] sm:text-[30px]">
+                How is {shortName} Performed?
+              </h2>
+            </div>
 
-            <div className="relative mt-12">
-              {/* connectors: horizontal on desktop, vertical on mobile */}
-              <div
+            <div className="relative mt-20">
+              {/* flowing connector: vertical wave on mobile, horizontal wave on desktop */}
+              <svg
                 aria-hidden
-                className="absolute inset-x-[10%] top-9 hidden h-px bg-[var(--color-tint)] lg:block"
-              />
-              <div aria-hidden className="absolute left-9 top-0 bottom-0 w-px bg-[var(--color-tint)] lg:hidden" />
+                viewBox="0 0 100 800"
+                preserveAspectRatio="none"
+                className="pointer-events-none absolute left-1/2 top-0 h-full w-[90px] -translate-x-1/2 lg:hidden"
+              >
+                <defs>
+                  <linearGradient id="flow-line-mobile" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="var(--color-teal)" />
+                    <stop offset="100%" stopColor="var(--color-sky)" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M50,0 C15,70 85,130 50,200 C15,270 85,330 50,400 C15,470 85,530 50,600 C15,670 85,730 50,800"
+                  fill="none"
+                  stroke="url(#flow-line-mobile)"
+                  strokeWidth="2.5"
+                  strokeDasharray="1 10"
+                  strokeLinecap="round"
+                />
+              </svg>
+              <svg
+                aria-hidden
+                viewBox="0 0 1000 72"
+                preserveAspectRatio="none"
+                className="pointer-events-none absolute inset-x-0 top-0 hidden h-[72px] w-full lg:block"
+              >
+                <defs>
+                  <linearGradient id="flow-line-desktop" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stopColor="var(--color-teal)" />
+                    <stop offset="100%" stopColor="var(--color-sky)" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M20,24 L100,24 C200,24 200,48 300,48 C400,48 400,24 500,24 C600,24 600,48 700,48 C800,48 800,24 900,24 L980,24"
+                  fill="none"
+                  stroke="url(#flow-line-desktop)"
+                  strokeWidth="2.5"
+                  strokeDasharray="1 10"
+                  strokeLinecap="round"
+                />
+              </svg>
 
-              <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-5 lg:gap-4">
+              <div className="relative grid grid-cols-1 gap-12 sm:gap-14 lg:grid-cols-5 lg:items-start lg:gap-6">
                 {procedure.map((step, i) => {
                   const StepIcon = getProcedureIcon(step.title);
+                  const floatUp = i % 2 === 0;
                   return (
-                    <div key={step.title} className="relative flex items-start gap-4 lg:flex-col lg:items-center lg:text-center">
-                      <span className="relative z-10 flex h-[72px] w-[72px] shrink-0 items-center justify-center rounded-full bg-[var(--color-tint)] ring-4 ring-white">
+                    <div
+                      key={step.title}
+                      className={`relative mx-auto w-full max-w-[380px] lg:mx-0 lg:max-w-none ${
+                        floatUp
+                          ? "translate-x-2 lg:translate-x-0 lg:-translate-y-3"
+                          : "-translate-x-2 lg:translate-x-0 lg:translate-y-3"
+                      }`}
+                    >
+                      <span className="relative z-10 mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-full bg-[var(--color-tint)] ring-4 ring-white">
                         <StepIcon className="h-8 w-8 text-[var(--color-teal)]" />
                         <span className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--color-navy)] text-[11px] font-bold text-white ring-2 ring-white">
                           {i + 1}
                         </span>
                       </span>
-                      <div className="pt-2 lg:mt-4 lg:pt-0">
+
+                      <div className="relative z-10 mt-5 rounded-2xl bg-white p-5 text-center shadow-[0_20px_45px_-20px_rgba(15,35,65,0.28)] ring-1 ring-black/[0.04] sm:p-6">
                         <h3 className="text-[15px] font-semibold text-[var(--color-navy)]">{step.title}</h3>
-                        <p className="mt-1 text-[13px] leading-[1.6] text-[var(--color-ink)] lg:mx-auto lg:max-w-[170px]">
-                          {step.description}
-                        </p>
+                        <p className="mt-2 text-[13px] leading-[1.7] text-[var(--color-ink)]">{step.description}</p>
                       </div>
                     </div>
                   );
