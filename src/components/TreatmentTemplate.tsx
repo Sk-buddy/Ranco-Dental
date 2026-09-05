@@ -5,15 +5,7 @@ import { clinic } from "@/lib/data";
 import FaqAccordion from "./FaqAccordion";
 import WhatsappCta from "./WhatsappCta";
 import ProcedureTimeline from "./ProcedureTimeline";
-
-function initials(name: string) {
-  return name
-    .split(" ")
-    .map((part) => part[0])
-    .slice(0, 2)
-    .join("")
-    .toUpperCase();
-}
+import TestimonialCarousel from "./TestimonialCarousel";
 
 function CheckIcon({ className }: { className?: string }) {
   return (
@@ -39,7 +31,7 @@ function ChecklistGrid({ items }: { items: string[] }) {
 }
 
 export default function TreatmentTemplate({ treatment }: { treatment: Treatment }) {
-  const { name, shortName, tagline, heroImage, overview, reasons, procedure, whyChooseUs, faqs, doctor, testimonial } =
+  const { name, shortName, tagline, heroImage, overview, reasons, procedure, whyChooseUs, faqs, doctor, testimonials } =
     treatment;
 
   return (
@@ -183,29 +175,18 @@ export default function TreatmentTemplate({ treatment }: { treatment: Treatment 
         </div>
       </section>
 
-      {/* Testimonial + doctor */}
-      {(testimonial || doctor) && (
+      {/* Testimonial + doctor — order swaps on mobile so the doctor card leads, review follows */}
+      {((testimonials && testimonials.length > 0) || doctor) && (
         <section className="bg-white py-16 sm:py-24">
           <div className="container grid grid-cols-1 gap-8 lg:grid-cols-[1.3fr_0.7fr] lg:gap-12">
-            {testimonial && (
-              <figure className="flex flex-col gap-4 rounded-2xl bg-[var(--color-tint)] p-6 sm:p-8">
-                <div className="flex items-center gap-1.5 text-[var(--color-teal)]" aria-hidden>
-                  {"★★★★★"}
-                </div>
-                <blockquote className="text-[15px] leading-[1.7] text-[var(--color-ink)] sm:text-[16px]">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </blockquote>
-                <figcaption className="mt-auto flex items-center gap-3 pt-2">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-navy)] text-[13px] font-semibold text-white">
-                    {initials(testimonial.name)}
-                  </span>
-                  <span className="text-[14px] font-semibold text-[var(--color-navy)]">{testimonial.name}</span>
-                </figcaption>
-              </figure>
+            {testimonials && testimonials.length > 0 && (
+              <div className="order-2 lg:order-1">
+                <TestimonialCarousel items={testimonials} />
+              </div>
             )}
 
             {doctor && (
-              <div className="flex flex-col items-start gap-4 rounded-2xl bg-[var(--color-tint)] p-6 sm:p-8">
+              <div className="order-1 flex flex-col items-start gap-4 rounded-2xl bg-[var(--color-tint)] p-6 sm:p-8 lg:order-2">
                 <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full">
                   <Image src={doctor.photo} alt={doctor.name} fill sizes="80px" className="object-cover" />
                 </div>

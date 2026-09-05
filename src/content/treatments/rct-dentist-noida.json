@@ -74,8 +74,18 @@
     "specialty": "BDS, MDS – Conservative Dentistry | Endodontics & Root Canal Specialist",
     "photo": "/images/doctors/mona.jpg"
   },
-  "testimonial": {
-    "quote": "Had a root canal done by Dr. Neha, and it was a smooth, painless experience. She explained everything clearly and ensured my comfort throughout. The recovery was easy, thanks to her expert care. Highly recommend!",
-    "name": "Ankita Wadhwa"
-  }
+  "testimonials": [
+    {
+      "quote": "Had a root canal done by Dr. Neha, and it was a smooth, painless experience. She explained everything clearly and ensured my comfort throughout. The recovery was easy, thanks to her expert care. Highly recommend!",
+      "name": "Ankita Wadhwa"
+    },
+    {
+      "quote": "PLACEHOLDER — replace with a real review. I was dreading my root canal but the team walked me through every step and it was completely painless. Booking was easy and the clinic felt very clean and professional.",
+      "name": "Placeholder Reviewer 1"
+    },
+    {
+      "quote": "PLACEHOLDER — replace with a real review. Quick appointment, honest pricing, and the follow-up care after my RCT was excellent. Would recommend Ranco Dental to anyone in Noida.",
+      "name": "Placeholder Reviewer 2"
+    }
+  ]
 }

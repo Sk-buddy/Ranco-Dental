@@ -25,10 +25,11 @@ export type Treatment = {
     specialty: string;
     photo: string;
   };
-  testimonial?: {
+  /** Patient reviews — rendered as a dot-navigated carousel when there's more than one. */
+  testimonials?: {
     quote: string;
     name: string;
-  };
+  }[];
 };
 
 const TREATMENTS_DIR = path.join(process.cwd(), "src/content/treatments");
