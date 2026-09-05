@@ -58,7 +58,7 @@ export default function TestimonialCarousel({ items }: { items: Testimonial[] })
 
       {items.length > 1 && (
         <div
-          className="absolute left-0 top-full mt-4 flex items-center gap-1.5"
+          className="absolute left-6 top-full mt-4 flex items-center gap-1.5 sm:left-8"
           role="tablist"
           aria-label="Reviews"
         >
