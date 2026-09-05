@@ -53,34 +53,32 @@ export default function TestimonialCarousel({ items }: { items: Testimonial[] })
           &ldquo;{active.quote}&rdquo;
         </blockquote>
       </FadeIn>
-      <div className="mt-auto flex flex-wrap items-center justify-between gap-4 pt-2">
-        <figcaption className="flex items-center gap-3">
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-navy)] text-[13px] font-semibold text-white">
-            {initials(active.name)}
-          </span>
-          <span className="text-[14px] font-semibold text-[var(--color-navy)]">{active.name}</span>
-        </figcaption>
+      {items.length > 1 && (
+        <div className="flex items-center gap-1.5" role="tablist" aria-label="Reviews">
+          {items.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              role="tab"
+              aria-selected={i === index}
+              aria-label={`Show review ${i + 1} of ${items.length}`}
+              onClick={() => setIndex(i)}
+              className={`h-2 shrink-0 transition-all duration-300 ${
+                i === index
+                  ? "w-6 rounded-[2px] bg-[var(--color-teal)]"
+                  : "w-2 rounded-full bg-[var(--color-teal)]/30 hover:bg-[var(--color-teal)]/50"
+              }`}
+            />
+          ))}
+        </div>
+      )}
 
-        {items.length > 1 && (
-          <div className="flex items-center gap-1.5" role="tablist" aria-label="Reviews">
-            {items.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                role="tab"
-                aria-selected={i === index}
-                aria-label={`Show review ${i + 1} of ${items.length}`}
-                onClick={() => setIndex(i)}
-                className={`h-2 shrink-0 transition-all duration-300 ${
-                  i === index
-                    ? "w-6 rounded-[2px] bg-[var(--color-teal)]"
-                    : "w-2 rounded-full bg-[var(--color-teal)]/30 hover:bg-[var(--color-teal)]/50"
-                }`}
-              />
-            ))}
-          </div>
-        )}
-      </div>
+      <figcaption className="mt-auto flex items-center gap-3 pt-2">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-navy)] text-[13px] font-semibold text-white">
+          {initials(active.name)}
+        </span>
+        <span className="text-[14px] font-semibold text-[var(--color-navy)]">{active.name}</span>
+      </figcaption>
     </figure>
   );
 }
