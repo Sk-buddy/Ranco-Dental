@@ -204,7 +204,7 @@ export default function TreatmentTemplate({ treatment }: { treatment: Treatment 
       )}
 
       {/* FAQ */}
-      <section className="bg-[var(--color-tint)] py-16 sm:py-24">
+      <section className="bg-white py-16 sm:py-24">
         <div className="container">
           <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
             <h2 className="text-[24px] font-bold leading-[1.2] text-[var(--color-navy)] sm:text-[30px]">
