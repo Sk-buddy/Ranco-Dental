@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { services } from "@/lib/data";
 
 export default function Services() {
@@ -15,7 +16,7 @@ export default function Services() {
 
         <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4">
           {services.map((service) => (
-            <a
+            <Link
               key={service.slug}
               href={service.href}
               className="group flex flex-col overflow-hidden rounded-2xl bg-[var(--color-tint)] p-2.5 transition-transform hover:-translate-y-1 sm:p-3"
@@ -39,7 +40,7 @@ export default function Services() {
                   View Details
                 </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

@@ -38,7 +38,7 @@ export const services = [
     icon: "/images/services/root-canal.png",
     description:
       "Painless, single-sitting root canal therapy that saves the natural tooth using modern rotary technology.",
-    href: "https://rancodental.com/root-canal-treatment-noida/",
+    href: "/rct-dentist-noida/",
   },
   {
     slug: "scaling",

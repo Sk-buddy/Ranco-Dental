@@ -1,0 +1,81 @@
+{
+  "slug": "rct-dentist-noida",
+  "name": "Root Canal Treatment (RCT) in Noida",
+  "shortName": "Root Canal Treatment",
+  "tagline": "At Ranco Dental, we specialise in advanced dental treatments, including Root Canal Treatment (RCT), to help you preserve your natural smile and alleviate dental discomfort. Conveniently located in Noida, Sector 141, our experienced team is dedicated to providing pain-free and effective solutions tailored to your oral health needs.",
+  "heroImage": "/images/clinic-pic.jpeg",
+  "heroImageAlt": "Treatment room at Ranco Dental Clinic",
+  "seo": {
+    "title": "Root Canal Treatment in Noida | Pain-Free RCT | Ranco Dental",
+    "description": "Root Canal Treatment (RCT) in Noida Sector 141 at Ranco Dental. Pain-free, modern RCT to save your natural tooth from infection or decay."
+  },
+  "overview": [
+    "Root Canal Treatment is a procedure designed to save teeth that are severely infected or decayed. It involves removing the damaged pulp (soft tissue inside the tooth), cleaning and disinfecting the tooth's interior, and sealing it with a dental filling or crown to restore its strength and functionality. This treatment prevents further infection and helps retain your natural tooth."
+  ],
+  "reasons": [
+    "Deep cavities or tooth decay",
+    "Cracks or chips in the tooth",
+    "Trauma or injury to the tooth",
+    "Repeated dental procedures on the same tooth"
+  ],
+  "procedure": [
+    {
+      "title": "Diagnosis",
+      "description": "A thorough examination, including X-rays, to assess the extent of infection."
+    },
+    {
+      "title": "Anesthesia",
+      "description": "Local anesthesia is applied to numb the area and ensure your comfort."
+    },
+    {
+      "title": "Cleaning",
+      "description": "The infected pulp is removed, and the tooth's interior is cleaned and disinfected."
+    },
+    {
+      "title": "Filling and Sealing",
+      "description": "The cleaned canal is filled with a biocompatible material and sealed to prevent reinfection."
+    },
+    {
+      "title": "Restoration",
+      "description": "A crown or filling is placed to restore the tooth's functionality and appearance."
+    }
+  ],
+  "whyChooseUs": [
+    "Experienced dentists with specialized training",
+    "State-of-the-art equipment and modern techniques",
+    "Focus on patient comfort and care",
+    "Convenient location in Noida Sector 141",
+    "Transparent pricing and flexible appointment scheduling"
+  ],
+  "faqs": [
+    {
+      "question": "Is Root Canal Treatment painful?",
+      "answer": "Modern techniques and anesthesia make Root Canal Treatment virtually painless. Most patients report feeling relief from pain after the procedure."
+    },
+    {
+      "question": "How long does the procedure take?",
+      "answer": "Typically, an RCT can be completed in one to two visits, depending on the severity of the infection."
+    },
+    {
+      "question": "What is the cost of Root Canal Treatment?",
+      "answer": "The cost varies based on the complexity of the case and the tooth being treated. At Ranco Dental, we offer affordable and transparent pricing."
+    },
+    {
+      "question": "Will the tooth need special care after the treatment?",
+      "answer": "After RCT, maintain good oral hygiene, avoid chewing hard foods on the treated tooth, and schedule regular dental checkups."
+    },
+    {
+      "question": "Are there alternatives to Root Canal Treatment?",
+      "answer": "In some cases, tooth extraction may be an alternative. However, RCT is often the preferred option to preserve your natural tooth."
+    }
+  ],
+  "doctor": {
+    "name": "Dr. Mona",
+    "specialty": "BDS, MDS – Conservative Dentistry | Endodontics & Root Canal Specialist",
+    "photo": "/images/doctors/mona.jpg"
+  },
+  "testimonial": {
+    "quote": "Had a root canal done by Dr. Neha, and it was a smooth, painless experience. She explained everything clearly and ensured my comfort throughout. The recovery was easy, thanks to her expert care. Highly recommend!",
+    "name": "Ankita Wadhwa"
+  }
+}

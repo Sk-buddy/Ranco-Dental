@@ -42,7 +42,7 @@ export default function Header() {
     <header className="fixed inset-x-0 top-0 z-50 pt-2.5 sm:pt-5">
       <div className="container-fluid">
         <div className="grid grid-cols-[auto_1fr_auto] items-center gap-2 rounded-[14px] bg-white/95 px-3 py-2.5 shadow-[0_8px_30px_rgba(4,53,82,0.10)] backdrop-blur sm:gap-4 sm:px-6 sm:py-3">
-          <Link href="#top" className="flex shrink-0 items-center">
+          <Link href="/" className="flex shrink-0 items-center">
             <Image
               src="/images/logo.webp"
               alt="Ranco Dental Clinic"
