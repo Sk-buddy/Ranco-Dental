@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useState } from "react";
 
 type Testimonial = { quote: string; name: string };
 
@@ -13,24 +13,8 @@ function initials(name: string) {
     .toUpperCase();
 }
 
-/** Fades its children in on mount — remounted per-slide (via `key`) to crossfade quotes. */
-function FadeIn({ children, className = "" }: { children: ReactNode; className?: string }) {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const raf = requestAnimationFrame(() => setVisible(true));
-    return () => cancelAnimationFrame(raf);
-  }, []);
-
-  return (
-    <div className={`transition-opacity duration-500 ${visible ? "opacity-100" : "opacity-0"} ${className}`}>
-      {children}
-    </div>
-  );
-}
-
-/** Review card — a dot-navigated carousel when there's more than one testimonial,
- * with the active dot stretching into a rectangle instead of staying a circle. */
+/** Review card — a real sliding carousel (the whole card track translates) when there's
+ * more than one testimonial, with the active dot stretching into a rectangle below it. */
 export default function TestimonialCarousel({ items }: { items: Testimonial[] }) {
   const [index, setIndex] = useState(0);
 
@@ -40,28 +24,37 @@ export default function TestimonialCarousel({ items }: { items: Testimonial[] })
     return () => clearInterval(timer);
   }, [items.length]);
 
-  const active = items[index];
-  if (!active) return null;
+  if (items.length === 0) return null;
 
   return (
     <div className="flex h-full flex-col gap-4">
-      <figure className="flex flex-1 flex-col gap-4 rounded-2xl bg-[var(--color-tint)] p-6 sm:p-8">
-        <div className="flex items-center gap-1.5 text-[var(--color-teal)]" aria-hidden>
-          {"★★★★★"}
+      <div className="flex-1 overflow-hidden rounded-2xl bg-[var(--color-tint)]">
+        <div
+          className="flex h-full transition-transform duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]"
+          style={{ width: `${items.length * 100}%`, transform: `translateX(-${index * (100 / items.length)}%)` }}
+        >
+          {items.map((t) => (
+            <figure
+              key={t.name}
+              className="flex h-full shrink-0 flex-col gap-4 p-6 sm:p-8"
+              style={{ width: `${100 / items.length}%` }}
+            >
+              <div className="flex items-center gap-1.5 text-[var(--color-teal)]" aria-hidden>
+                {"★★★★★"}
+              </div>
+              <blockquote className="min-h-[110px] text-[15px] leading-[1.7] text-[var(--color-ink)] sm:min-h-[95px] sm:text-[16px]">
+                &ldquo;{t.quote}&rdquo;
+              </blockquote>
+              <figcaption className="mt-auto flex items-center gap-3 pt-2">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-navy)] text-[13px] font-semibold text-white">
+                  {initials(t.name)}
+                </span>
+                <span className="text-[14px] font-semibold text-[var(--color-navy)]">{t.name}</span>
+              </figcaption>
+            </figure>
+          ))}
         </div>
-        <FadeIn key={index} className="min-h-[110px] sm:min-h-[95px]">
-          <blockquote className="text-[15px] leading-[1.7] text-[var(--color-ink)] sm:text-[16px]">
-            &ldquo;{active.quote}&rdquo;
-          </blockquote>
-        </FadeIn>
-
-        <figcaption className="mt-auto flex items-center gap-3 pt-2">
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-navy)] text-[13px] font-semibold text-white">
-            {initials(active.name)}
-          </span>
-          <span className="text-[14px] font-semibold text-[var(--color-navy)]">{active.name}</span>
-        </figcaption>
-      </figure>
+      </div>
 
       {items.length > 1 && (
         <div className="flex items-center gap-1.5" role="tablist" aria-label="Reviews">
