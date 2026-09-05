@@ -11,11 +11,11 @@ export default function Specialists() {
           </h2>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:grid sm:snap-none sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:pb-0 lg:grid-cols-5">
           {specialists.map((doc) => (
             <div
               key={doc.name}
-              className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-[0_10px_30px_rgba(4,53,82,0.08)]"
+              className="flex w-[78%] shrink-0 snap-start flex-col overflow-hidden rounded-2xl bg-white shadow-[0_10px_30px_rgba(4,53,82,0.08)] sm:w-auto sm:shrink"
             >
               <div className="relative aspect-square w-full">
                 <Image
