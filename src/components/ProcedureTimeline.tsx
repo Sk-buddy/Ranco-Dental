@@ -55,7 +55,54 @@ export default function ProcedureTimeline({ steps }: { steps: Step[] }) {
   return (
     <div ref={wrapRef} className="relative mt-12 lg:mt-20">
       {/* Mobile: swipeable dot-nav carousel, one step per slide */}
-      <div className="lg:hidden">
+      <div className="relative lg:hidden">
+        {/* progress line — fills as you move through the steps, elastic-band style */}
+        <svg
+          aria-hidden
+          viewBox="0 0 400 32"
+          preserveAspectRatio="none"
+          className="pointer-events-none absolute inset-x-6 top-10 h-16"
+        >
+          <defs>
+            <linearGradient id={`flow-mc-${rawId}`} x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="var(--color-teal)" />
+              <stop offset="100%" stopColor="var(--color-sky)" />
+            </linearGradient>
+            <clipPath id={`clip-mc-${rawId}`}>
+              <rect
+                x="0"
+                y="0"
+                width={visible ? ((index + 1) / steps.length) * 400 : 0}
+                height="32"
+                style={{ transition: "width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)" }}
+              />
+            </clipPath>
+            <marker
+              id={`arrow-mc-${rawId}`}
+              viewBox="0 0 14 14"
+              markerUnits="userSpaceOnUse"
+              markerWidth="14"
+              markerHeight="14"
+              refX="12"
+              refY="7"
+              orient="auto"
+            >
+              <path d="M1,1 L13,7 L1,13 Z" fill="var(--color-sky)" />
+            </marker>
+          </defs>
+          <g clipPath={`url(#clip-mc-${rawId})`}>
+            <path
+              d="M6,16 C60,2 100,30 160,16 C220,2 260,30 320,16 C350,10 370,16 390,16"
+              fill="none"
+              stroke={`url(#flow-mc-${rawId})`}
+              strokeWidth="2.5"
+              strokeDasharray="1 10"
+              strokeLinecap="round"
+              markerEnd={`url(#arrow-mc-${rawId})`}
+            />
+          </g>
+        </svg>
+
         <div className="overflow-hidden rounded-2xl">
           <div
             className="flex transition-transform duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]"
