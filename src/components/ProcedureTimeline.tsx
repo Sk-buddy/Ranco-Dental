@@ -1,19 +1,33 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState, type ComponentType } from "react";
 import Reveal from "./Reveal";
 import { getProcedureIcon } from "./icons/ProcedureIcons";
 
 type Step = { title: string; description: string };
 
+/** One step's icon badge + number, shared between the desktop timeline and the mobile slide. */
+function StepBadge({ icon: Icon, index }: { icon: ComponentType<{ className?: string }>; index: number }) {
+  return (
+    <span className="relative z-10 mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-full bg-[var(--color-tint)] ring-4 ring-white">
+      <Icon className="h-8 w-8 text-[var(--color-teal)]" />
+      <span className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--color-navy)] text-[11px] font-bold text-white ring-2 ring-white">
+        {index + 1}
+      </span>
+    </span>
+  );
+}
+
 /**
- * The "How is it performed" timeline: a flowing dotted connector that draws itself
- * in (like an elastic band snapping taut) once scrolled into view, with each step's
- * card popping up into place along it, staggered in sequence.
+ * The "How is it performed" section.
+ * Desktop (lg+): a flowing dotted connector that draws itself in (elastic-band style)
+ * with each step's card floating along it, staggered in sequence.
+ * Mobile: a swipeable, dot-navigated carousel — one step per slide.
  */
 export default function ProcedureTimeline({ steps }: { steps: Step[] }) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const [index, setIndex] = useState(0);
   const rawId = useId().replace(/[^a-zA-Z0-9]/g, "");
 
   useEffect(() => {
@@ -32,55 +46,57 @@ export default function ProcedureTimeline({ steps }: { steps: Step[] }) {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (steps.length <= 1) return;
+    const timer = setInterval(() => setIndex((i) => (i + 1) % steps.length), 5000);
+    return () => clearInterval(timer);
+  }, [steps.length]);
+
   return (
-    <div ref={wrapRef} className="relative mt-20">
-      {/* flowing connector: vertical wave on mobile, horizontal wave on desktop — both
-          draw in via a widening clip-path "reveal window", elastic-band style */}
-      <svg
-        aria-hidden
-        viewBox="0 0 100 800"
-        preserveAspectRatio="none"
-        className="pointer-events-none absolute left-1/2 top-0 h-full w-[90px] -translate-x-1/2 lg:hidden"
-      >
-        <defs>
-          <linearGradient id={`flow-m-${rawId}`} x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="var(--color-teal)" />
-            <stop offset="100%" stopColor="var(--color-sky)" />
-          </linearGradient>
-          <clipPath id={`clip-m-${rawId}`}>
-            <rect
-              x="0"
-              y="0"
-              width="100"
-              height={visible ? 800 : 0}
-              style={{ transition: "height 1.6s cubic-bezier(0.34, 1.56, 0.64, 1)" }}
-            />
-          </clipPath>
-          <marker
-            id={`arrow-m-${rawId}`}
-            viewBox="0 0 14 14"
-            markerUnits="userSpaceOnUse"
-            markerWidth="14"
-            markerHeight="14"
-            refX="12"
-            refY="7"
-            orient="auto"
+    <div ref={wrapRef} className="relative mt-12 lg:mt-20">
+      {/* Mobile: swipeable dot-nav carousel, one step per slide */}
+      <div className="lg:hidden">
+        <div className="overflow-hidden rounded-2xl">
+          <div
+            className="flex transition-transform duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]"
+            style={{ width: `${steps.length * 100}%`, transform: `translateX(-${index * (100 / steps.length)}%)` }}
           >
-            <path d="M1,1 L13,7 L1,13 Z" fill="var(--color-sky)" />
-          </marker>
-        </defs>
-        <g clipPath={`url(#clip-m-${rawId})`}>
-          <path
-            d="M50,0 C15,70 85,130 50,200 C15,270 85,330 50,400 C15,470 85,530 50,600 C15,670 85,730 50,794"
-            fill="none"
-            stroke={`url(#flow-m-${rawId})`}
-            strokeWidth="2.5"
-            strokeDasharray="1 10"
-            strokeLinecap="round"
-            markerEnd={`url(#arrow-m-${rawId})`}
-          />
-        </g>
-      </svg>
+            {steps.map((step, i) => (
+              <div key={step.title} className="shrink-0 pt-9" style={{ width: `${100 / steps.length}%` }}>
+                <StepBadge icon={getProcedureIcon(step.title)} index={i} />
+                <div className="relative z-20 -mt-3 rounded-2xl bg-white p-5 pt-7 text-center shadow-[0_20px_45px_-20px_rgba(15,35,65,0.28)] ring-1 ring-black/[0.04]">
+                  <h3 className="text-[17px] font-semibold text-[var(--color-navy)]">{step.title}</h3>
+                  <p className="mt-2 min-h-[80px] text-[13px] leading-[1.7] text-[var(--color-ink)]">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {steps.length > 1 && (
+          <div className="mt-5 flex items-center justify-center gap-1.5" role="tablist" aria-label="Steps">
+            {steps.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                role="tab"
+                aria-selected={i === index}
+                aria-label={`Show step ${i + 1} of ${steps.length}`}
+                onClick={() => setIndex(i)}
+                className={`h-2 shrink-0 transition-all duration-300 ${
+                  i === index
+                    ? "w-6 rounded-[50px] bg-[var(--color-teal)]"
+                    : "w-2 rounded-full bg-[var(--color-teal)]/30 hover:bg-[var(--color-teal)]/50"
+                }`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Desktop: flowing connector, drawing in via a widening clip-path "reveal window" */}
       <svg
         aria-hidden
         viewBox="0 0 1000 72"
@@ -127,27 +143,14 @@ export default function ProcedureTimeline({ steps }: { steps: Step[] }) {
         </g>
       </svg>
 
-      <div className="relative grid grid-cols-1 gap-12 sm:gap-14 lg:grid-cols-5 lg:items-start lg:gap-6">
+      <div className="relative hidden lg:grid lg:grid-cols-5 lg:items-start lg:gap-6">
         {steps.map((step, i) => {
-          const StepIcon = getProcedureIcon(step.title);
           const floatUp = i % 2 === 0;
           return (
             <Reveal key={step.title} delay={i * 140}>
-              <div
-                className={`relative mx-auto w-full max-w-[380px] lg:mx-0 lg:max-w-none ${
-                  floatUp
-                    ? "translate-x-2 lg:translate-x-0 lg:-translate-y-3"
-                    : "-translate-x-2 lg:translate-x-0 lg:translate-y-3"
-                }`}
-              >
-                <span className="relative z-10 mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-full bg-[var(--color-tint)] ring-4 ring-white">
-                  <StepIcon className="h-8 w-8 text-[var(--color-teal)]" />
-                  <span className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--color-navy)] text-[11px] font-bold text-white ring-2 ring-white">
-                    {i + 1}
-                  </span>
-                </span>
-
-                <div className="relative z-20 -mt-3 rounded-2xl bg-white p-5 pt-7 text-center shadow-[0_20px_45px_-20px_rgba(15,35,65,0.28)] ring-1 ring-black/[0.04] sm:p-6 sm:pt-8">
+              <div className={floatUp ? "lg:-translate-y-3" : "lg:translate-y-3"}>
+                <StepBadge icon={getProcedureIcon(step.title)} index={i} />
+                <div className="relative z-20 -mt-3 rounded-2xl bg-white p-6 pt-8 text-center shadow-[0_20px_45px_-20px_rgba(15,35,65,0.28)] ring-1 ring-black/[0.04]">
                   <h3 className="text-[17px] font-semibold text-[var(--color-navy)]">{step.title}</h3>
                   <p className="mt-2 text-[13px] leading-[1.7] text-[var(--color-ink)]">{step.description}</p>
                 </div>
