@@ -72,7 +72,7 @@ export default function TestimonialCarousel({ items }: { items: Testimonial[] })
               onClick={() => setIndex(i)}
               className={`h-2 shrink-0 transition-all duration-300 ${
                 i === index
-                  ? "w-6 rounded-none bg-[var(--color-teal)]"
+                  ? "w-6 rounded-[50px] bg-[var(--color-teal)]"
                   : "w-2 rounded-full bg-[var(--color-teal)]/30 hover:bg-[var(--color-teal)]/50"
               }`}
             />
