@@ -152,13 +152,34 @@ export default function TreatmentTemplate({ treatment }: { treatment: Treatment 
         </section>
       )}
 
-      {/* Why choose us */}
-      <section className="bg-[var(--color-tint)] py-16 sm:py-24">
-        <div className="container">
-          <h2 className="text-[24px] font-bold leading-[1.2] text-[var(--color-navy)] sm:text-[30px]">
-            Why Choose Ranco Dental for {shortName}?
-          </h2>
-          <ChecklistGrid items={whyChooseUs} />
+      {/* Why choose us — full-bleed photo + navy checklist banner */}
+      <section className="bg-[var(--color-navy)]">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className="relative h-[280px] sm:h-[380px] lg:h-auto">
+            <Image
+              src="/images/hero-1.webp"
+              alt="Dentist at Ranco Dental Clinic ready for a treatment"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover object-[30%_25%]"
+            />
+          </div>
+
+          <div className="flex flex-col justify-center px-6 py-14 sm:px-10 sm:py-20 lg:px-16 lg:py-24">
+            <h2 className="max-w-md text-[24px] font-bold leading-[1.25] text-white sm:text-[30px] lg:text-[34px]">
+              Why Choose Ranco Dental for {shortName}?
+            </h2>
+            <ul className="mt-8 flex max-w-md flex-col gap-4">
+              {whyChooseUs.map((item) => (
+                <li key={item} className="flex items-center gap-3">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--color-teal)]">
+                    <CheckIcon className="h-3.5 w-3.5 text-white" />
+                  </span>
+                  <span className="text-[15px] font-semibold text-white sm:text-[16px]">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
