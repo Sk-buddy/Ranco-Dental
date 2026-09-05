@@ -4,7 +4,7 @@ import type { Treatment } from "@/lib/treatments";
 import { clinic } from "@/lib/data";
 import FaqAccordion from "./FaqAccordion";
 import WhatsappCta from "./WhatsappCta";
-import { getProcedureIcon } from "./icons/ProcedureIcons";
+import ProcedureTimeline from "./ProcedureTimeline";
 
 function initials(name: string) {
   return name
@@ -147,80 +147,7 @@ export default function TreatmentTemplate({ treatment }: { treatment: Treatment 
               </h2>
             </div>
 
-            <div className="relative mt-20">
-              {/* flowing connector: vertical wave on mobile, horizontal wave on desktop */}
-              <svg
-                aria-hidden
-                viewBox="0 0 100 800"
-                preserveAspectRatio="none"
-                className="pointer-events-none absolute left-1/2 top-0 h-full w-[90px] -translate-x-1/2 lg:hidden"
-              >
-                <defs>
-                  <linearGradient id="flow-line-mobile" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="var(--color-teal)" />
-                    <stop offset="100%" stopColor="var(--color-sky)" />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M50,0 C15,70 85,130 50,200 C15,270 85,330 50,400 C15,470 85,530 50,600 C15,670 85,730 50,800"
-                  fill="none"
-                  stroke="url(#flow-line-mobile)"
-                  strokeWidth="2.5"
-                  strokeDasharray="1 10"
-                  strokeLinecap="round"
-                />
-              </svg>
-              <svg
-                aria-hidden
-                viewBox="0 0 1000 72"
-                preserveAspectRatio="none"
-                className="pointer-events-none absolute inset-x-0 top-0 hidden h-[72px] w-full lg:block"
-              >
-                <defs>
-                  <linearGradient id="flow-line-desktop" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stopColor="var(--color-teal)" />
-                    <stop offset="100%" stopColor="var(--color-sky)" />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M20,24 L100,24 C200,24 200,48 300,48 C400,48 400,24 500,24 C600,24 600,48 700,48 C800,48 800,24 900,24 L980,24"
-                  fill="none"
-                  stroke="url(#flow-line-desktop)"
-                  strokeWidth="2.5"
-                  strokeDasharray="1 10"
-                  strokeLinecap="round"
-                />
-              </svg>
-
-              <div className="relative grid grid-cols-1 gap-12 sm:gap-14 lg:grid-cols-5 lg:items-start lg:gap-6">
-                {procedure.map((step, i) => {
-                  const StepIcon = getProcedureIcon(step.title);
-                  const floatUp = i % 2 === 0;
-                  return (
-                    <div
-                      key={step.title}
-                      className={`relative mx-auto w-full max-w-[380px] lg:mx-0 lg:max-w-none ${
-                        floatUp
-                          ? "translate-x-2 lg:translate-x-0 lg:-translate-y-3"
-                          : "-translate-x-2 lg:translate-x-0 lg:translate-y-3"
-                      }`}
-                    >
-                      <span className="relative z-10 mx-auto flex h-[72px] w-[72px] items-center justify-center rounded-full bg-[var(--color-tint)] ring-4 ring-white">
-                        <StepIcon className="h-8 w-8 text-[var(--color-teal)]" />
-                        <span className="absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full bg-[var(--color-navy)] text-[11px] font-bold text-white ring-2 ring-white">
-                          {i + 1}
-                        </span>
-                      </span>
-
-                      <div className="relative z-10 mt-5 rounded-2xl bg-white p-5 text-center shadow-[0_20px_45px_-20px_rgba(15,35,65,0.28)] ring-1 ring-black/[0.04] sm:p-6">
-                        <h3 className="text-[15px] font-semibold text-[var(--color-navy)]">{step.title}</h3>
-                        <p className="mt-2 text-[13px] leading-[1.7] text-[var(--color-ink)]">{step.description}</p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+            <ProcedureTimeline steps={procedure} />
           </div>
         </section>
       )}
