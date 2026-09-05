@@ -44,15 +44,25 @@ export default function TestimonialCarousel({ items }: { items: Testimonial[] })
   if (!active) return null;
 
   return (
-    <figure className="flex h-full flex-col gap-4 rounded-2xl bg-[var(--color-tint)] p-6 sm:p-8">
-      <div className="flex items-center gap-1.5 text-[var(--color-teal)]" aria-hidden>
-        {"★★★★★"}
-      </div>
-      <FadeIn key={index} className="min-h-[110px] sm:min-h-[95px]">
-        <blockquote className="text-[15px] leading-[1.7] text-[var(--color-ink)] sm:text-[16px]">
-          &ldquo;{active.quote}&rdquo;
-        </blockquote>
-      </FadeIn>
+    <div className="flex h-full flex-col gap-4">
+      <figure className="flex flex-1 flex-col gap-4 rounded-2xl bg-[var(--color-tint)] p-6 sm:p-8">
+        <div className="flex items-center gap-1.5 text-[var(--color-teal)]" aria-hidden>
+          {"★★★★★"}
+        </div>
+        <FadeIn key={index} className="min-h-[110px] sm:min-h-[95px]">
+          <blockquote className="text-[15px] leading-[1.7] text-[var(--color-ink)] sm:text-[16px]">
+            &ldquo;{active.quote}&rdquo;
+          </blockquote>
+        </FadeIn>
+
+        <figcaption className="mt-auto flex items-center gap-3 pt-2">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-navy)] text-[13px] font-semibold text-white">
+            {initials(active.name)}
+          </span>
+          <span className="text-[14px] font-semibold text-[var(--color-navy)]">{active.name}</span>
+        </figcaption>
+      </figure>
+
       {items.length > 1 && (
         <div className="flex items-center gap-1.5" role="tablist" aria-label="Reviews">
           {items.map((_, i) => (
@@ -72,13 +82,6 @@ export default function TestimonialCarousel({ items }: { items: Testimonial[] })
           ))}
         </div>
       )}
-
-      <figcaption className="mt-auto flex items-center gap-3 pt-2">
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[var(--color-navy)] text-[13px] font-semibold text-white">
-          {initials(active.name)}
-        </span>
-        <span className="text-[14px] font-semibold text-[var(--color-navy)]">{active.name}</span>
-      </figcaption>
-    </figure>
+    </div>
   );
 }
