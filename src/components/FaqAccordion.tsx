@@ -16,11 +16,16 @@ export type FaqItem = { question: string; answer: string };
 export default function FaqAccordion({
   items,
   columns = 2,
+  cardBg = "tint",
 }: {
   items: FaqItem[];
   columns?: 1 | 2;
+  /** Card background — pick whichever contrasts with the section it's placed on. */
+  cardBg?: "tint" | "white";
 }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const cardBgClass = cardBg === "white" ? "bg-white" : "bg-[var(--color-tint)]";
+  const iconBgClass = cardBg === "white" ? "bg-[var(--color-tint)]" : "bg-white";
 
   return (
     <div
@@ -33,7 +38,7 @@ export default function FaqAccordion({
         return (
           <div
             key={faq.question}
-            className="h-fit overflow-hidden rounded-2xl bg-[var(--color-tint)] shadow-[0_2px_10px_rgba(4,53,82,0.05)] transition-shadow hover:shadow-[0_6px_20px_rgba(4,53,82,0.08)]"
+            className={`h-fit overflow-hidden rounded-2xl ${cardBgClass} shadow-[0_2px_10px_rgba(4,53,82,0.05)] transition-shadow hover:shadow-[0_6px_20px_rgba(4,53,82,0.08)]`}
           >
             <button
               type="button"
@@ -46,7 +51,7 @@ export default function FaqAccordion({
               </span>
               <span
                 aria-hidden
-                className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white text-[var(--color-teal)] transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
+                className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full ${iconBgClass} text-[var(--color-teal)] transition-transform duration-300 ${isOpen ? "rotate-45" : ""}`}
               >
                 <PlusIcon className="h-3.5 w-3.5" />
               </span>
