@@ -28,7 +28,7 @@ export default function TestimonialCarousel({ items }: { items: Testimonial[] })
 
   return (
     <div className="flex h-full flex-col gap-4">
-      <div className="flex-1 overflow-hidden rounded-2xl bg-[var(--color-tint)]">
+      <div className="flex-1 overflow-hidden rounded-2xl">
         <div
           className="flex h-full transition-transform duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]"
           style={{ width: `${items.length * 100}%`, transform: `translateX(-${index * (100 / items.length)}%)` }}
@@ -36,7 +36,7 @@ export default function TestimonialCarousel({ items }: { items: Testimonial[] })
           {items.map((t) => (
             <figure
               key={t.name}
-              className="flex h-full shrink-0 flex-col gap-4 p-6 sm:p-8"
+              className="flex h-full shrink-0 flex-col gap-4 rounded-2xl bg-[var(--color-tint)] p-6 sm:p-8"
               style={{ width: `${100 / items.length}%` }}
             >
               <div className="flex items-center gap-1.5 text-[var(--color-teal)]" aria-hidden>
