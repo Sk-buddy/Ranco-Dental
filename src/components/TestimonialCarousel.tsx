@@ -27,8 +27,8 @@ export default function TestimonialCarousel({ items }: { items: Testimonial[] })
   if (items.length === 0) return null;
 
   return (
-    <div className="flex h-full flex-col gap-4">
-      <div className="flex-1 overflow-hidden rounded-2xl">
+    <div className="relative h-full">
+      <div className="h-full overflow-hidden rounded-2xl">
         <div
           className="flex h-full transition-transform duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]"
           style={{ width: `${items.length * 100}%`, transform: `translateX(-${index * (100 / items.length)}%)` }}
@@ -57,7 +57,11 @@ export default function TestimonialCarousel({ items }: { items: Testimonial[] })
       </div>
 
       {items.length > 1 && (
-        <div className="flex items-center gap-1.5" role="tablist" aria-label="Reviews">
+        <div
+          className="absolute left-0 top-full mt-4 flex items-center gap-1.5"
+          role="tablist"
+          aria-label="Reviews"
+        >
           {items.map((_, i) => (
             <button
               key={i}
