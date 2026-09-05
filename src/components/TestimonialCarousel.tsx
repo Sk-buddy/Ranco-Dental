@@ -44,7 +44,7 @@ export default function TestimonialCarousel({ items }: { items: Testimonial[] })
   if (!active) return null;
 
   return (
-    <figure className="flex flex-col gap-4 rounded-2xl bg-[var(--color-tint)] p-6 sm:p-8">
+    <figure className="flex h-full flex-col gap-4 rounded-2xl bg-[var(--color-tint)] p-6 sm:p-8">
       <div className="flex items-center gap-1.5 text-[var(--color-teal)]" aria-hidden>
         {"★★★★★"}
       </div>
