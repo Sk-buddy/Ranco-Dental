@@ -35,7 +35,7 @@ export const services = [
     slug: "root-canal-treatment",
     name: "Root Canal Treatment",
     short: "RCT",
-    icon: "/images/services/root-canal.png",
+    icon: "/images/services/root-canal.jpg",
     description:
       "Painless, single-sitting root canal therapy that saves the natural tooth using modern rotary technology.",
     href: "/rct-dentist-noida/",
@@ -44,7 +44,7 @@ export const services = [
     slug: "scaling",
     name: "Scaling",
     short: "Scaling & Polishing",
-    icon: "/images/services/scaling.png",
+    icon: "/images/services/scaling.jpg",
     description:
       "Deep ultrasonic cleaning that removes plaque and tartar, keeping gums healthy and breath fresh.",
     href: "https://rancodental.com/",
@@ -53,7 +53,7 @@ export const services = [
     slug: "tooth-extraction",
     name: "Tooth Extraction",
     short: "Extraction",
-    icon: "/images/services/extraction.png",
+    icon: "/images/services/extraction.jpg",
     description:
       "Safe, virtually painless removal of damaged or impacted teeth with careful aftercare guidance.",
     href: "https://rancodental.com/tooth-extraction-noida/",
@@ -62,7 +62,7 @@ export const services = [
     slug: "kids-dentistry",
     name: "Kids Dentistry",
     short: "Pediatric Care",
-    icon: "/images/services/kids.png",
+    icon: "/images/services/kids.jpg",
     description:
       "A gentle, child-friendly approach to milk teeth, cavities and early orthodontic checks.",
     href: "https://rancodental.com/",
@@ -71,7 +71,7 @@ export const services = [
     slug: "implants",
     name: "Dental Implants",
     short: "Implants",
-    icon: "/images/services/implants.png",
+    icon: "/images/services/implants.jpg",
     description:
       "Permanent, natural-looking replacements for missing teeth using certified implant systems.",
     href: "https://rancodental.com/",
@@ -80,7 +80,7 @@ export const services = [
     slug: "dentures",
     name: "Dentures",
     short: "Dentures",
-    icon: "/images/services/dentures.png",
+    icon: "/images/services/dentures.jpg",
     description:
       "Custom-fitted complete and partial dentures for comfortable chewing and a natural smile.",
     href: "https://rancodental.com/",
@@ -89,7 +89,7 @@ export const services = [
     slug: "crowns-bridges",
     name: "Crowns & Bridges",
     short: "Crowns & Bridges",
-    icon: "/images/services/crowns.png",
+    icon: "/images/services/crowns.jpg",
     description:
       "Durable, tooth-coloured crowns and bridges that restore strength, shape and appearance.",
     href: "https://rancodental.com/",
@@ -98,7 +98,7 @@ export const services = [
     slug: "wisdom-tooth",
     name: "Wisdom Tooth Removal",
     short: "Wisdom Tooth",
-    icon: "/images/services/wisdom.png",
+    icon: "/images/services/wisdom.jpg",
     description:
       "Expert surgical extraction of impacted wisdom teeth with minimal discomfort and fast recovery.",
     href: "https://rancodental.com/",

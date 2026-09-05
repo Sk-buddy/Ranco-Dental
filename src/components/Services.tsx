@@ -21,13 +21,13 @@ export default function Services() {
               href={service.href}
               className="group flex flex-col overflow-hidden rounded-2xl bg-[var(--color-tint)] p-2.5 transition-transform hover:-translate-y-1 sm:p-3"
             >
-              <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-xl bg-white">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-white">
                 <Image
                   src={service.icon}
-                  alt=""
-                  width={80}
-                  height={80}
-                  className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-110 sm:h-20 sm:w-20"
+                  alt={service.name}
+                  fill
+                  sizes="(min-width: 1024px) 22vw, 45vw"
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
 
