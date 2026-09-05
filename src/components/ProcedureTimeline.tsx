@@ -61,7 +61,7 @@ export default function ProcedureTimeline({ steps }: { steps: Step[] }) {
           aria-hidden
           viewBox="0 0 400 32"
           preserveAspectRatio="none"
-          className="pointer-events-none absolute inset-x-6 top-10 h-16"
+          className="pointer-events-none absolute left-6 top-10 h-16 w-[calc(100%-48px)]"
         >
           <defs>
             <linearGradient id={`flow-mc-${rawId}`} x1="0" y1="0" x2="1" y2="0">
