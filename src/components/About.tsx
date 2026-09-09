@@ -51,7 +51,7 @@ export default function About() {
 
       <div className="container-fluid relative">
         <h2 className="relative z-10 max-w-3xl text-[32px] font-bold leading-[1.1] text-[var(--color-navy)] sm:text-[42px] lg:text-[48px]">
-          More Than Dentistry:{" "}
+          More Than Dentistry -{" "}
           <span className="text-[var(--color-teal)]">It&rsquo;s Personal Care</span>
         </h2>
 
