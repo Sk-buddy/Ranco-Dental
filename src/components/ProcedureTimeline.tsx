@@ -6,6 +6,22 @@ import { getProcedureIcon } from "./icons/ProcedureIcons";
 
 type Step = { title: string; description: string };
 
+/** Builds the desktop connector path so it lines up with N evenly-spaced icon
+ * columns (any count), alternating the wave height per icon the same way the
+ * original hand-tuned 5-step path did. */
+function buildFlowPath(n: number) {
+  if (n <= 1) return "M20,24 L980,24";
+  const centers = Array.from({ length: n }, (_, i) => ((i + 0.5) / n) * 1000);
+  const ys = centers.map((_, i) => (i % 2 === 0 ? 24 : 48));
+  let d = `M20,${ys[0]} L${centers[0].toFixed(1)},${ys[0]}`;
+  for (let i = 0; i < n - 1; i++) {
+    const midX = ((centers[i] + centers[i + 1]) / 2).toFixed(1);
+    d += ` C${midX},${ys[i]} ${midX},${ys[i + 1]} ${centers[i + 1].toFixed(1)},${ys[i + 1]}`;
+  }
+  d += ` L980,${ys[n - 1]}`;
+  return d;
+}
+
 /** One step's icon badge + number, shared between the desktop timeline and the mobile slide. */
 function StepBadge({ icon: Icon, index }: { icon: ComponentType<{ className?: string }>; index: number }) {
   return (
@@ -179,7 +195,7 @@ export default function ProcedureTimeline({ steps }: { steps: Step[] }) {
         </defs>
         <g clipPath={`url(#clip-d-${rawId})`}>
           <path
-            d="M20,24 L100,24 C200,24 200,48 300,48 C400,48 400,24 500,24 C600,24 600,48 700,48 C800,48 800,24 900,24 L974,24"
+            d={buildFlowPath(steps.length)}
             fill="none"
             stroke={`url(#flow-d-${rawId})`}
             strokeWidth="2.5"
@@ -190,7 +206,10 @@ export default function ProcedureTimeline({ steps }: { steps: Step[] }) {
         </g>
       </svg>
 
-      <div className="relative hidden lg:grid lg:grid-cols-5 lg:items-start lg:gap-6">
+      <div
+        className="relative hidden lg:grid lg:items-start lg:gap-6"
+        style={{ gridTemplateColumns: `repeat(${steps.length}, minmax(0, 1fr))` }}
+      >
         {steps.map((step, i) => {
           const floatUp = i % 2 === 0;
           return (

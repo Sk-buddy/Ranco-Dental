@@ -72,7 +72,7 @@ export function GenericToothIcon({ className }: { className?: string }) {
 const KEYWORD_MAP: [RegExp, (props: { className?: string }) => React.JSX.Element][] = [
   [/diagnos|x-?ray|exam/i, DiagnosisIcon],
   [/anesthe|numb/i, AnesthesiaIcon],
-  [/clean|disinfect/i, CleaningIcon],
+  [/clean|disinfect|scal|polish/i, CleaningIcon],
   [/fill|seal/i, FillingIcon],
   [/restor|crown|cap/i, RestorationIcon],
 ];

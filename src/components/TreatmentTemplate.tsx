@@ -175,10 +175,18 @@ export default function TreatmentTemplate({ treatment }: { treatment: Treatment 
         </div>
       </section>
 
-      {/* Testimonial + doctor — order swaps on mobile so the doctor card leads, review follows */}
+      {/* Testimonial + doctor — order swaps on mobile so the doctor card leads, review follows.
+          When there's no real testimonial yet, the doctor card centers alone rather than
+          leaving an empty column (no placeholder review gets fabricated to fill the gap). */}
       {((testimonials && testimonials.length > 0) || doctor) && (
         <section className="bg-white py-16 sm:py-24">
-          <div className="container grid grid-cols-1 gap-8 lg:grid-cols-[1.3fr_0.7fr] lg:gap-12">
+          <div
+            className={
+              testimonials && testimonials.length > 0
+                ? "container grid grid-cols-1 gap-8 lg:grid-cols-[1.3fr_0.7fr] lg:gap-12"
+                : "container flex justify-center"
+            }
+          >
             {testimonials && testimonials.length > 0 && (
               <div className="order-2 lg:order-1">
                 <TestimonialCarousel items={testimonials} />
@@ -186,7 +194,11 @@ export default function TreatmentTemplate({ treatment }: { treatment: Treatment 
             )}
 
             {doctor && (
-              <div className="order-1 flex flex-col items-start gap-4 rounded-2xl bg-[var(--color-tint)] p-6 sm:p-8 lg:order-2">
+              <div
+                className={`order-1 flex flex-col items-start gap-4 rounded-2xl bg-[var(--color-tint)] p-6 sm:p-8 ${
+                  testimonials && testimonials.length > 0 ? "lg:order-2" : "w-full max-w-sm"
+                }`}
+              >
                 <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full">
                   <Image src={doctor.photo} alt={doctor.name} fill sizes="80px" className="object-cover" />
                 </div>

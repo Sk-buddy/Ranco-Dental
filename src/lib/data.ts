@@ -47,7 +47,7 @@ export const services = [
     icon: "/images/services/scaling.jpg",
     description:
       "Deep ultrasonic cleaning that removes plaque and tartar, keeping gums healthy and breath fresh.",
-    href: "https://rancodental.com/",
+    href: "/scaling-and-polishing-noida/",
   },
   {
     slug: "tooth-extraction",

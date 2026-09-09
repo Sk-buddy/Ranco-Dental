@@ -1,0 +1,73 @@
+{
+  "slug": "scaling-and-polishing-noida",
+  "name": "Scaling and Polishing in Noida",
+  "shortName": "Scaling and Polishing",
+  "tagline": "At Ranco Dental, we prioritize your oral health by offering professional scaling and polishing services. Our advanced techniques remove plaque, tartar, and stains, leaving your teeth clean and your gums healthy.",
+  "heroImage": "/images/clinic-pic.jpeg",
+  "heroImageAlt": "Treatment room at Ranco Dental Clinic",
+  "seo": {
+    "title": "Scaling and Polishing in Noida | Teeth Cleaning | Ranco Dental",
+    "description": "Professional dental scaling and polishing in Noida Sector 141 at Ranco Dental. Remove plaque, tartar and stains for cleaner teeth and healthier gums."
+  },
+  "overview": [
+    "Scaling and polishing is a routine dental procedure that involves removing plaque, tartar (hardened plaque), and surface stains from your teeth. Scaling focuses on cleaning the areas above and below the gumline while polishing smoothens the tooth surfaces, leaving them shiny and less prone to plaque buildup."
+  ],
+  "reasons": [
+    "Gum disease (gingivitis and periodontitis)",
+    "Bad breath (halitosis)",
+    "Tooth decay",
+    "Stained teeth"
+  ],
+  "procedure": [
+    {
+      "title": "Examination",
+      "description": "A dental checkup to assess the condition of your teeth and gums."
+    },
+    {
+      "title": "Scaling",
+      "description": "Using ultrasonic scalers and hand instruments, we remove plaque, tartar, and debris from the tooth surface and below the gumline."
+    },
+    {
+      "title": "Polishing",
+      "description": "A polishing paste is applied to smooth the tooth surfaces and remove stains."
+    },
+    {
+      "title": "Fluoride Treatment",
+      "description": "A fluoride application may be done to strengthen your teeth and protect against cavities."
+    }
+  ],
+  "whyChooseUs": [
+    "Experienced dentists with specialized training",
+    "State-of-the-art equipment and modern techniques",
+    "Focus on patient comfort and care",
+    "Convenient location in Noida Sector 141",
+    "Transparent pricing and flexible appointment scheduling"
+  ],
+  "faqs": [
+    {
+      "question": "Is scaling and polishing painful?",
+      "answer": "The procedure is generally painless. However, if your gums are sensitive or inflamed, you may feel slight discomfort. Our dentists ensure your comfort throughout the process."
+    },
+    {
+      "question": "How often should I get scaling and polishing done?",
+      "answer": "It is recommended to get scaling and polishing done every 6 months. However, the frequency may vary depending on your oral health condition."
+    },
+    {
+      "question": "Will scaling weaken my teeth?",
+      "answer": "No, scaling does not weaken your teeth. It removes harmful deposits and helps maintain healthy teeth and gums."
+    },
+    {
+      "question": "Can scaling and polishing remove deep stains?",
+      "answer": "While polishing can remove surface stains, deeper stains may require teeth-whitening treatments."
+    },
+    {
+      "question": "How long does the procedure take?",
+      "answer": "Scaling and polishing usually take 30 to 60 minutes, depending on the extent of tartar buildup."
+    }
+  ],
+  "doctor": {
+    "name": "Dr. Ankita Pandey",
+    "specialty": "Dental Surgeon & Cosmetologist",
+    "photo": "/images/doctors/ankita-pandey.jpg"
+  }
+}
