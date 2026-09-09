@@ -56,7 +56,7 @@ export const services = [
     icon: "/images/services/extraction.jpg",
     description:
       "Safe, virtually painless removal of damaged or impacted teeth with careful aftercare guidance.",
-    href: "https://rancodental.com/tooth-extraction-noida/",
+    href: "/tooth-extraction-noida/",
   },
   {
     slug: "kids-dentistry",

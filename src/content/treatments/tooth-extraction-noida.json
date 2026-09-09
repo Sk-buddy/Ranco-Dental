@@ -1,0 +1,85 @@
+{
+  "slug": "tooth-extraction-noida",
+  "name": "Tooth Extraction in Noida",
+  "shortName": "Tooth Extraction",
+  "tagline": "At Ranco Dental, we provide expert tooth extraction services to relieve pain and protect your oral health. With a focus on patient comfort and safety, our clinic in Noida Sector 141 is equipped with advanced technology to make the procedure as smooth and painless as possible.",
+  "heroImage": "/images/clinic-pic.jpeg",
+  "heroImageAlt": "Treatment room at Ranco Dental Clinic",
+  "seo": {
+    "title": "Tooth Extraction in Noida | Safe & Painless | Ranco Dental",
+    "description": "Safe, painless tooth extraction in Noida Sector 141 at Ranco Dental. Expert care for decayed, impacted or infected teeth with fast recovery."
+  },
+  "overview": [
+    "Tooth extraction is the process of removing a damaged, decayed, or problematic tooth from its socket in the jawbone. It is typically performed when the tooth cannot be saved through other treatments such as fillings, crowns, or root canals."
+  ],
+  "reasons": [
+    "Severe tooth decay or damage beyond repair",
+    "Impacted wisdom teeth causing pain or crowding",
+    "Gum disease leading to loose teeth",
+    "Preparation for orthodontic treatment",
+    "Overcrowded teeth in the mouth",
+    "Infection or abscess that cannot be treated with antibiotics"
+  ],
+  "procedure": [
+    {
+      "title": "Diagnosis",
+      "description": "We examine your teeth and take X-rays to assess the condition of the tooth and surrounding structures."
+    },
+    {
+      "title": "Anesthesia",
+      "description": "Local anesthesia is applied to numb the area and ensure your comfort."
+    },
+    {
+      "title": "Extraction",
+      "description": "For simple extractions, the tooth is gently loosened and removed. For surgical extractions, a small incision is made in the gum to remove the tooth."
+    },
+    {
+      "title": "Post-Procedure Care",
+      "description": "The area is cleaned, and stitches may be placed if necessary. Post-extraction instructions are provided to aid healing."
+    }
+  ],
+  "whyChooseUs": [
+    "Experienced dentists with specialized training",
+    "State-of-the-art equipment and modern techniques",
+    "Focus on patient comfort and care",
+    "Convenient location in Noida Sector 141",
+    "Transparent pricing and flexible appointment scheduling"
+  ],
+  "faqs": [
+    {
+      "question": "Is tooth extraction painful?",
+      "answer": "No, local anesthesia ensures the procedure is painless. You may feel slight pressure but no pain."
+    },
+    {
+      "question": "How long does it take to recover?",
+      "answer": "Most patients recover within 7 to 10 days. Following post-care instructions can speed up the healing process."
+    },
+    {
+      "question": "Can I go to work after extraction?",
+      "answer": "It is advisable to rest for at least 24 hours after the procedure. For surgical extractions, you may need 2 to 3 days of rest."
+    },
+    {
+      "question": "What happens if I don't extract an infected tooth?",
+      "answer": "Ignoring an infected tooth can lead to severe pain, swelling, and the spread of infection to other parts of your body."
+    },
+    {
+      "question": "Are there alternatives?",
+      "answer": "If the tooth can be saved, treatments like root canal therapy or dental crowns may be recommended."
+    }
+  ],
+  "doctor": {
+    "name": "Dr. Vaibhav",
+    "specialty": "Oral & Maxillofacial Surgeon, Certified Implantologist",
+    "photo": "/images/doctors/vaibhav.jpg"
+  },
+  "testimonials": [
+    {
+      "quote": "PLACEHOLDER: replace with a real review. Had a tooth pulled out here and the whole thing was over before I knew it. Barely any pain, and the aftercare instructions made recovery easy.",
+      "name": "Placeholder Reviewer 1"
+    },
+    {
+      "quote": "PLACEHOLDER: replace with a real review. Was nervous about my extraction but the doctor explained every step. Healed up within a week with no complications.",
+      "name": "Placeholder Reviewer 2"
+    }
+  ]
+}

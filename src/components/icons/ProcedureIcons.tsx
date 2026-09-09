@@ -61,6 +61,15 @@ export function RestorationIcon({ className }: { className?: string }) {
   );
 }
 
+export function ExtractionIcon({ className }: { className?: string }) {
+  return (
+    <svg {...base} className={className}>
+      <path d={TOOTH_PATH} />
+      <path d="M18 9.5V3.5M18 3.5 15.5 6M18 3.5 20.5 6" />
+    </svg>
+  );
+}
+
 export function GenericToothIcon({ className }: { className?: string }) {
   return (
     <svg {...base} className={className}>
@@ -75,6 +84,7 @@ const KEYWORD_MAP: [RegExp, (props: { className?: string }) => React.JSX.Element
   [/clean|disinfect|scal|polish/i, CleaningIcon],
   [/fill|seal/i, FillingIcon],
   [/restor|crown|cap/i, RestorationIcon],
+  [/extract|remov|pull/i, ExtractionIcon],
 ];
 
 export function getProcedureIcon(stepTitle: string) {
