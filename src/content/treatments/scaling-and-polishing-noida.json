@@ -69,5 +69,15 @@
     "name": "Dr. Ankita Pandey",
     "specialty": "Dental Surgeon & Cosmetologist",
     "photo": "/images/doctors/ankita-pandey.jpg"
-  }
+  },
+  "testimonials": [
+    {
+      "quote": "PLACEHOLDER: replace with a real review. Got my scaling and polishing done here and my teeth feel so much cleaner. The staff explained the whole process and there was zero pain, just some mild sensitivity for a day.",
+      "name": "Placeholder Reviewer 1"
+    },
+    {
+      "quote": "PLACEHOLDER: replace with a real review. Quick, thorough cleaning and the polish really removed years of stains. Booked easily and was in and out within an hour.",
+      "name": "Placeholder Reviewer 2"
+    }
+  ]
 }
