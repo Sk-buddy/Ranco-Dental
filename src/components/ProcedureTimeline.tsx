@@ -154,7 +154,7 @@ export default function ProcedureTimeline({ steps }: { steps: Step[] }) {
 
         <div
           ref={trackRef}
-          className="flex snap-x snap-mandatory overflow-x-auto overflow-y-hidden rounded-2xl [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="flex snap-x snap-mandatory overflow-x-auto overflow-y-hidden pb-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {steps.map((step, i) => (
             <div key={step.title} className="w-full shrink-0 snap-center pt-9">
@@ -170,7 +170,7 @@ export default function ProcedureTimeline({ steps }: { steps: Step[] }) {
         </div>
 
         {steps.length > 1 && (
-          <div className="mt-5 flex items-center justify-center gap-1.5" role="tablist" aria-label="Steps">
+          <div className="-mt-5 flex items-center justify-center gap-1.5" role="tablist" aria-label="Steps">
             {steps.map((_, i) => (
               <button
                 key={i}
