@@ -10,7 +10,7 @@ export default function Faq() {
             Frequently Asked <span className="text-[var(--color-teal)]">Questions</span>
           </h2>
           <p className="mt-4 text-[15px] leading-[1.6] text-[var(--color-ink)] sm:text-[16px]">
-            Everything you&apos;d want to know before your visit — if
+            Everything you&apos;d want to know before your visit. If
             it&apos;s not here, just message us on WhatsApp.
           </p>
         </div>

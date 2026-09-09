@@ -18,13 +18,13 @@ export default function WhatsappCta() {
 
       <div className="container relative mx-auto flex max-w-2xl flex-col items-center text-center">
         <h2 className="text-[32px] font-bold leading-[1.1] text-white sm:text-[42px] lg:text-[48px]">
-          Skip the Wait —{" "}
+          Skip the Wait:{" "}
           <span className="text-[var(--color-sky)]">Chat With Us Now</span>
         </h2>
 
         <p className="mt-4 max-w-lg text-[15px] leading-[1.6] text-[var(--color-muted-navy)] sm:text-[16px]">
           Got a question or ready to book? Message us on WhatsApp and talk to
-          our team directly — no forms, no hold music.
+          our team directly, no forms, no hold music.
         </p>
 
         <a

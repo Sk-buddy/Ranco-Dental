@@ -32,7 +32,7 @@ export default function Hero() {
 
           <p className="max-w-[40rem] text-[15px] leading-[1.6] text-[var(--color-muted-navy)] sm:text-[16px]">
             {clinic.name} in Noida Sector 141 offers expert dental care for all
-            ages — from routine cleanings to advanced treatments like root
+            ages, from routine cleanings to advanced treatments like root
             canals, implants, and smile makeovers.
           </p>
 
