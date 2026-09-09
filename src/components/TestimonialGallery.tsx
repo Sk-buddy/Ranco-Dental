@@ -44,6 +44,20 @@ export default function TestimonialGallery() {
     return () => track.removeEventListener("scroll", onTrackScroll);
   }, []);
 
+  // Autoplay — reads live scroll position rather than `activeIndex` so it never acts
+  // on a stale closure if the user just swiped.
+  useEffect(() => {
+    if (testimonials.length <= 1) return;
+    const timer = setInterval(() => {
+      const track = trackRef.current;
+      if (!track) return;
+      const step = slideStep(track);
+      const next = (Math.round(track.scrollLeft / step) + 1) % testimonials.length;
+      track.scrollTo({ left: next * step, behavior: "smooth" });
+    }, 3500);
+    return () => clearInterval(timer);
+  }, []);
+
   // Slide width (peek carousel: each card is < 100% wide) plus the gap between cards.
   function slideStep(track: HTMLDivElement) {
     const first = track.children[0] as HTMLElement | undefined;

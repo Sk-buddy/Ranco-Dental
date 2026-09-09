@@ -42,6 +42,7 @@ function StepBadge({ icon: Icon, index }: { icon: ComponentType<{ className?: st
  */
 export default function ProcedureTimeline({ steps }: { steps: Step[] }) {
   const wrapRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   const [index, setIndex] = useState(0);
   const rawId = useId().replace(/[^a-zA-Z0-9]/g, "");
@@ -62,11 +63,43 @@ export default function ProcedureTimeline({ steps }: { steps: Step[] }) {
     return () => observer.disconnect();
   }, []);
 
+  // Autoplay — reads live scroll position rather than `index` so it never acts on a
+  // stale closure if the user just swiped.
   useEffect(() => {
     if (steps.length <= 1) return;
-    const timer = setInterval(() => setIndex((i) => (i + 1) % steps.length), 5000);
+    const timer = setInterval(() => {
+      const track = trackRef.current;
+      if (!track) return;
+      const width = track.clientWidth || 1;
+      const next = (Math.round(track.scrollLeft / width) + 1) % steps.length;
+      track.scrollTo({ left: next * width, behavior: "smooth" });
+    }, 5000);
     return () => clearInterval(timer);
   }, [steps.length]);
+
+  // Keep the active dot (and the progress line's fill) in sync with manual swipes too.
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        ticking = false;
+        const i = Math.round(track.scrollLeft / (track.clientWidth || 1));
+        setIndex(Math.max(0, Math.min(steps.length - 1, i)));
+      });
+    };
+    track.addEventListener("scroll", onScroll, { passive: true });
+    return () => track.removeEventListener("scroll", onScroll);
+  }, [steps.length]);
+
+  function goToStep(i: number) {
+    const track = trackRef.current;
+    if (!track) return;
+    track.scrollTo({ left: i * track.clientWidth, behavior: "smooth" });
+  }
 
   return (
     <div ref={wrapRef} className="relative mt-12 lg:mt-20">
@@ -119,23 +152,21 @@ export default function ProcedureTimeline({ steps }: { steps: Step[] }) {
           </g>
         </svg>
 
-        <div className="overflow-hidden rounded-2xl">
-          <div
-            className="flex transition-transform duration-700 ease-[cubic-bezier(0.65,0,0.35,1)]"
-            style={{ width: `${steps.length * 100}%`, transform: `translateX(-${index * (100 / steps.length)}%)` }}
-          >
-            {steps.map((step, i) => (
-              <div key={step.title} className="shrink-0 pt-9" style={{ width: `${100 / steps.length}%` }}>
-                <StepBadge icon={getProcedureIcon(step.title)} index={i} />
-                <div className="relative z-20 -mt-3 rounded-2xl bg-white p-5 pt-7 text-center shadow-[0_20px_45px_-20px_rgba(15,35,65,0.28)] ring-1 ring-black/[0.04]">
-                  <h3 className="text-[17px] font-semibold text-[var(--color-navy)]">{step.title}</h3>
-                  <p className="mt-2 min-h-[80px] text-[13px] leading-[1.7] text-[var(--color-ink)]">
-                    {step.description}
-                  </p>
-                </div>
+        <div
+          ref={trackRef}
+          className="flex snap-x snap-mandatory overflow-x-auto overflow-y-hidden rounded-2xl [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
+          {steps.map((step, i) => (
+            <div key={step.title} className="w-full shrink-0 snap-center pt-9">
+              <StepBadge icon={getProcedureIcon(step.title)} index={i} />
+              <div className="relative z-20 -mt-3 rounded-2xl bg-white p-5 pt-7 text-center shadow-[0_20px_45px_-20px_rgba(15,35,65,0.28)] ring-1 ring-black/[0.04]">
+                <h3 className="text-[17px] font-semibold text-[var(--color-navy)]">{step.title}</h3>
+                <p className="mt-2 min-h-[80px] text-[13px] leading-[1.7] text-[var(--color-ink)]">
+                  {step.description}
+                </p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
         {steps.length > 1 && (
@@ -147,7 +178,7 @@ export default function ProcedureTimeline({ steps }: { steps: Step[] }) {
                 role="tab"
                 aria-selected={i === index}
                 aria-label={`Show step ${i + 1} of ${steps.length}`}
-                onClick={() => setIndex(i)}
+                onClick={() => goToStep(i)}
                 className={`h-2 shrink-0 transition-all duration-300 ${
                   i === index
                     ? "w-6 rounded-[50px] bg-[var(--color-teal)]"
