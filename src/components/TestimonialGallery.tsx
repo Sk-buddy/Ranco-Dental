@@ -35,8 +35,8 @@ export default function TestimonialGallery() {
       ticking = true;
       requestAnimationFrame(() => {
         ticking = false;
-        const slideWidth = track.clientWidth || 1;
-        const i = Math.round(track.scrollLeft / slideWidth);
+        const step = slideStep(track);
+        const i = Math.round(track.scrollLeft / step);
         setActiveIndex(Math.max(0, Math.min(testimonials.length - 1, i)));
       });
     };
@@ -44,10 +44,17 @@ export default function TestimonialGallery() {
     return () => track.removeEventListener("scroll", onTrackScroll);
   }, []);
 
+  // Slide width (peek carousel: each card is < 100% wide) plus the gap between cards.
+  function slideStep(track: HTMLDivElement) {
+    const first = track.children[0] as HTMLElement | undefined;
+    const gap = parseFloat(getComputedStyle(track).columnGap || "0");
+    return (first?.offsetWidth || track.clientWidth) + gap;
+  }
+
   function goToSlide(i: number) {
     const track = trackRef.current;
     if (!track) return;
-    track.scrollTo({ left: i * track.clientWidth, behavior: "smooth" });
+    track.scrollTo({ left: i * slideStep(track), behavior: "smooth" });
   }
 
   useEffect(() => {
@@ -139,7 +146,7 @@ export default function TestimonialGallery() {
           className="flex snap-x snap-mandatory gap-4 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {testimonials.map((t) => (
-            <div key={t.name} className="w-full shrink-0 snap-center">
+            <div key={t.name} className="w-[90%] shrink-0 snap-start">
               <figure className="flex h-full flex-col gap-3 rounded-2xl bg-[var(--color-tint)] p-4">
                 <div className="flex items-center gap-1.5 text-[12px] text-[var(--color-teal)]" aria-hidden>
                   {"★★★★★"}
