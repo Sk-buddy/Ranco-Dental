@@ -157,7 +157,7 @@ export default function ProcedureTimeline({ steps }: { steps: Step[] }) {
           className="flex snap-x snap-mandatory overflow-x-auto overflow-y-hidden pb-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {steps.map((step, i) => (
-            <div key={step.title} className="w-full shrink-0 snap-center pt-9">
+            <div key={step.title} className="w-full shrink-0 snap-center px-2 pt-9">
               <StepBadge icon={getProcedureIcon(step.title)} index={i} />
               <div className="relative z-20 -mt-3 rounded-2xl bg-white p-5 pt-7 text-center shadow-[0_20px_45px_-20px_rgba(15,35,65,0.28)] ring-1 ring-black/[0.04]">
                 <h3 className="text-[17px] font-semibold text-[var(--color-navy)]">{step.title}</h3>
