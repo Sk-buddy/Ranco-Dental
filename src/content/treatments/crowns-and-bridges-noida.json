@@ -1,0 +1,86 @@
+{
+  "slug": "crowns-and-bridges-noida",
+  "name": "Crowns & Bridges in Noida",
+  "shortName": "Crown and Bridge Treatment",
+  "tagline": "At Ranco Dental, we craft durable, natural-looking crowns and bridges to restore damaged teeth and replace missing ones. Using premium materials and modern techniques, our team in Noida Sector 141 helps you get back a strong, confident smile.",
+  "heroImage": "/images/clinic-pic.jpeg",
+  "heroImageAlt": "Treatment room at Ranco Dental Clinic",
+  "seo": {
+    "title": "Crowns & Bridges in Noida | Ranco Dental",
+    "description": "Durable, tooth-coloured crowns and bridges in Noida Sector 141 at Ranco Dental. Restore damaged or missing teeth with a natural-looking, long-lasting fit."
+  },
+  "overview": [
+    "A dental crown is a cap placed over a damaged or weakened tooth to restore its shape, strength and appearance, while a bridge replaces one or more missing teeth by anchoring a false tooth to the crowns on either side of the gap. Both are custom-made to match the colour and shape of your natural teeth."
+  ],
+  "overviewImage": "/images/crowns.jpeg",
+  "overviewImageAlt": "Dental crowns and a bridge on a model of the gums",
+  "reasons": [
+    "A cracked, chipped or severely worn-down tooth",
+    "A large filling that no longer supports the tooth",
+    "One or more missing teeth affecting your bite",
+    "A tooth after root canal treatment that needs protection",
+    "Wanting to improve the shape or colour of a tooth"
+  ],
+  "procedure": [
+    {
+      "title": "Consultation and Examination",
+      "description": "We examine your teeth and take X-rays to check if a crown or bridge is the right solution for you."
+    },
+    {
+      "title": "Tooth Preparation",
+      "description": "The affected tooth is gently reshaped to make room for the crown, and impressions are taken."
+    },
+    {
+      "title": "Temporary Crown Placement",
+      "description": "A temporary crown is fitted to protect your tooth while your custom restoration is prepared."
+    },
+    {
+      "title": "Final Crown or Bridge Fitting",
+      "description": "Your permanent crown or bridge is checked for fit and colour match, then permanently cemented into place."
+    }
+  ],
+  "whyChooseUs": [
+    "Experienced dentists with specialized training",
+    "State-of-the-art equipment and modern techniques",
+    "Focus on patient comfort and care",
+    "Convenient location in Noida Sector 141",
+    "Transparent pricing and flexible appointment scheduling"
+  ],
+  "faqs": [
+    {
+      "question": "Is getting a crown or bridge painful?",
+      "answer": "No, the area is numbed with local anesthesia before your tooth is prepared, so the procedure itself is painless. You may feel mild sensitivity for a day or two afterward."
+    },
+    {
+      "question": "How many visits does it take?",
+      "answer": "Most crowns and bridges take two visits: one to prepare the tooth and fit a temporary crown, and a second to fit the permanent restoration once it's ready."
+    },
+    {
+      "question": "How long do crowns and bridges last?",
+      "answer": "With good oral hygiene and regular checkups, crowns and bridges typically last 10 to 15 years or longer."
+    },
+    {
+      "question": "Can I eat normally with a crown or bridge?",
+      "answer": "Yes, once your permanent restoration is fitted you can eat normally. We recommend avoiding very hard or sticky foods with your temporary crown."
+    },
+    {
+      "question": "Will my crown or bridge look natural?",
+      "answer": "Yes, crowns and bridges are custom-made to match the colour, size and shape of your surrounding teeth for a natural-looking result."
+    }
+  ],
+  "doctor": {
+    "name": "Dr. Ankita Pandey",
+    "specialty": "Dental Surgeon & Cosmetologist",
+    "photo": "/images/doctors/ankita-pandey.jpg"
+  },
+  "testimonials": [
+    {
+      "quote": "PLACEHOLDER: replace with a real review. Needed a crown after a large filling broke down and the fit was perfect on the first try. You genuinely can't tell it apart from my other teeth.",
+      "name": "Placeholder Reviewer 1"
+    },
+    {
+      "quote": "PLACEHOLDER: replace with a real review. Got a bridge fitted for two missing teeth and the whole process was smooth. Very happy with how natural it looks.",
+      "name": "Placeholder Reviewer 2"
+    }
+  ]
+}

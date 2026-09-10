@@ -70,6 +70,15 @@ export function ExtractionIcon({ className }: { className?: string }) {
   );
 }
 
+export function ImplantIcon({ className }: { className?: string }) {
+  return (
+    <svg {...base} className={className}>
+      <path d={TOOTH_PATH} />
+      <path d="M18 3v6M16.2 4.5h3.6M16.2 6.5h3.6M16.2 8.5h3.6" />
+    </svg>
+  );
+}
+
 export function GenericToothIcon({ className }: { className?: string }) {
   return (
     <svg {...base} className={className}>
@@ -79,12 +88,13 @@ export function GenericToothIcon({ className }: { className?: string }) {
 }
 
 const KEYWORD_MAP: [RegExp, (props: { className?: string }) => React.JSX.Element][] = [
-  [/diagnos|x-?ray|exam/i, DiagnosisIcon],
+  [/diagnos|x-?ray|exam|consult/i, DiagnosisIcon],
   [/anesthe|numb/i, AnesthesiaIcon],
   [/clean|disinfect|scal|polish/i, CleaningIcon],
   [/fill|seal/i, FillingIcon],
   [/restor|crown|cap/i, RestorationIcon],
   [/extract|remov|pull/i, ExtractionIcon],
+  [/implant/i, ImplantIcon],
 ];
 
 export function getProcedureIcon(stepTitle: string) {

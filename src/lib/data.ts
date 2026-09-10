@@ -74,7 +74,7 @@ export const services = [
     icon: "/images/services/implants.jpg",
     description:
       "Permanent, natural-looking replacements for missing teeth using certified implant systems.",
-    href: "https://rancodental.com/",
+    href: "/dental-implant/",
   },
   {
     slug: "dentures",
@@ -83,7 +83,7 @@ export const services = [
     icon: "/images/services/dentures.jpg",
     description:
       "Custom-fitted complete and partial dentures for comfortable chewing and a natural smile.",
-    href: "https://rancodental.com/",
+    href: "/denture/",
   },
   {
     slug: "crowns-bridges",
@@ -92,7 +92,7 @@ export const services = [
     icon: "/images/services/crowns.jpg",
     description:
       "Durable, tooth-coloured crowns and bridges that restore strength, shape and appearance.",
-    href: "https://rancodental.com/",
+    href: "/crowns-and-bridges-noida/",
   },
   {
     slug: "wisdom-tooth",
@@ -101,7 +101,7 @@ export const services = [
     icon: "/images/services/wisdom.jpg",
     description:
       "Expert surgical extraction of impacted wisdom teeth with minimal discomfort and fast recovery.",
-    href: "https://rancodental.com/",
+    href: "/wisdom-tooth-removal-noida/",
   },
 ];
 

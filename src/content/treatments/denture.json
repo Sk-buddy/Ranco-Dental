@@ -1,0 +1,85 @@
+{
+  "slug": "denture",
+  "name": "Comfortable and Affordable Dentures in Noida",
+  "shortName": "Denture Fitting",
+  "tagline": "At Ranco Dental, we provide high-quality dentures to restore your smile and improve oral functionality. Located in Noida Sector 141, our expert team ensures a comfortable fit and a natural look, helping you regain confidence and ease in everyday activities like eating and speaking.",
+  "heroImage": "/images/clinic-pic.jpeg",
+  "heroImageAlt": "Treatment room at Ranco Dental Clinic",
+  "seo": {
+    "title": "Best Dentist Noida Sector 141 | Ranco Dental Clinic Near you",
+    "description": "Book your appointment at the nearest advanced dental clinic in Noida! 15+ experienced dentists offering services like root canal treatment, scaling, implants, extractions, and more. Serving Noida Sectors 143, 142, 137, and 141."
+  },
+  "overview": [
+    "Dentures are removable prosthetic devices designed to replace missing teeth and surrounding tissues. They are custom-made to fit your mouth and can be full (replacing all teeth) or partial (replacing a few missing teeth)."
+  ],
+  "overviewImage": "/images/dentures.jpeg",
+  "overviewImageAlt": "A full set of upper and lower dentures",
+  "reasons": [
+    "Have lost multiple teeth due to decay, injury, or aging",
+    "Struggle with chewing or speaking due to missing teeth",
+    "Want to prevent facial sagging caused by tooth loss",
+    "Seek an affordable and non-invasive tooth replacement option"
+  ],
+  "procedure": [
+    {
+      "title": "Consultation and Examination",
+      "description": "Assessment of your oral health and discussion of the best denture option for you."
+    },
+    {
+      "title": "Impressions and Measurements",
+      "description": "Custom molds of your mouth are taken to create dentures that fit perfectly."
+    },
+    {
+      "title": "Trial and Adjustments",
+      "description": "A trial denture is fitted to ensure comfort and alignment before finalizing."
+    },
+    {
+      "title": "Final Denture Placement",
+      "description": "The completed dentures are delivered and adjusted for the perfect fit."
+    }
+  ],
+  "whyChooseUs": [
+    "Skilled prosthodontists specializing in custom denture fittings",
+    "High-quality materials for durability and comfort",
+    "Personalized care and attention to detail",
+    "Convenient location in Noida Sector 141 with flexible appointment options",
+    "Affordable pricing with no hidden costs"
+  ],
+  "faqs": [
+    {
+      "question": "Are dentures uncomfortable to wear?",
+      "answer": "Modern dentures are designed for comfort, but initial adjustments may be needed as you get used to them."
+    },
+    {
+      "question": "How long do dentures last?",
+      "answer": "With proper care, dentures can last 5-10 years. Regular checkups are essential to maintain their fit."
+    },
+    {
+      "question": "Can I eat normally with dentures?",
+      "answer": "Yes, although it may take some time to adapt. Start with soft foods and gradually return to your normal diet."
+    },
+    {
+      "question": "Do dentures affect speech?",
+      "answer": "You may experience slight difficulty initially, but practice and adjustments will help you speak normally."
+    },
+    {
+      "question": "Can I sleep with my dentures in?",
+      "answer": "It is recommended to remove dentures at night to give your gums a rest and maintain oral hygiene."
+    }
+  ],
+  "doctor": {
+    "name": "Dr. Neha Baliyan",
+    "specialty": "Dental Surgeon & Implantologist",
+    "photo": "/images/doctors/neha-baliyan.jpg"
+  },
+  "testimonials": [
+    {
+      "quote": "PLACEHOLDER: replace with a real review. Needed a full set of dentures and the team made sure they fit perfectly before I left. Eating and speaking feel completely normal again.",
+      "name": "Placeholder Reviewer 1"
+    },
+    {
+      "quote": "PLACEHOLDER: replace with a real review. Very comfortable process, the trial fitting really helped get things right. Happy with how natural they look.",
+      "name": "Placeholder Reviewer 2"
+    }
+  ]
+}

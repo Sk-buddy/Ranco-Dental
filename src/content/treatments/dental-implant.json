@@ -1,0 +1,82 @@
+{
+  "slug": "dental-implant",
+  "name": "Dental Implants in Noida",
+  "shortName": "Implant Treatment",
+  "tagline": "At Ranco Dental, we specialize in providing durable and natural-looking dental implants to help you regain your confidence and improve your oral health. Our clinic in Noida Sector 141 offers advanced implant solutions tailored to meet your unique dental needs in a comfortable and caring environment.",
+  "heroImage": "/images/clinic-pic.jpeg",
+  "heroImageAlt": "Treatment room at Ranco Dental Clinic",
+  "seo": {
+    "title": "Best Dentist Noida Sector 141 | Ranco Dental Clinic Near you",
+    "description": "Book your appointment at the nearest advanced dental clinic in Noida! 15+ experienced dentists offering services like root canal treatment, scaling, implants, extractions, and more. Serving Noida Sectors 143, 142, 137, and 141."
+  },
+  "overview": [
+    "Dental implants are artificial tooth roots made of biocompatible materials like titanium, surgically placed into the jawbone to support a replacement tooth, bridge, or denture."
+  ],
+  "overviewImage": "/images/implants.jpeg",
+  "overviewImageAlt": "Dental implant placed in the jawbone supporting a crown",
+  "reasons": [
+    "Have one or more missing teeth",
+    "Want a long-term, stable replacement option",
+    "Are uncomfortable with traditional dentures",
+    "Wish to prevent bone loss in the jaw",
+    "Seek a natural look and feel for replacement teeth"
+  ],
+  "procedure": [
+    {
+      "title": "Initial Consultation",
+      "description": "A thorough dental examination and X-rays to assess your suitability for implants."
+    },
+    {
+      "title": "Implant Placement",
+      "description": "The titanium implant is surgically placed into the jawbone under local anesthesia."
+    },
+    {
+      "title": "Healing Period",
+      "description": "The implant integrates with the bone over a few months (osseointegration)."
+    },
+    {
+      "title": "Abutment and Crown Placement",
+      "description": "A connector (abutment) and custom-made crown are attached to the implant."
+    }
+  ],
+  "whyChooseUs": [
+    "Experienced dentists with specialized training",
+    "State-of-the-art equipment and modern techniques",
+    "Focus on patient comfort and care",
+    "Convenient location in Noida Sector 141",
+    "Transparent pricing and flexible appointment scheduling"
+  ],
+  "faqs": [
+    {
+      "question": "Are dental implants painful?",
+      "answer": "The procedure is performed under local anesthesia, minimizing discomfort. Post-surgery, mild pain or swelling can be managed with prescribed medication."
+    },
+    {
+      "question": "How long do dental implants last?",
+      "answer": "With proper care, dental implants can last a lifetime."
+    },
+    {
+      "question": "Can anyone get dental implants?",
+      "answer": "Most people with good oral health and sufficient jawbone density are candidates for implants. However, certain conditions may require additional evaluation or preparation."
+    },
+    {
+      "question": "Are dental implants safe?",
+      "answer": "Yes, dental implants are a safe and widely used dental procedure with a high success rate."
+    }
+  ],
+  "doctor": {
+    "name": "Dr. Vaibhav",
+    "specialty": "Oral & Maxillofacial Surgeon, Certified Implantologist",
+    "photo": "/images/doctors/vaibhav.jpg"
+  },
+  "testimonials": [
+    {
+      "quote": "PLACEHOLDER: replace with a real review. Got a dental implant done after putting it off for years. The team walked me through every step and the recovery was much easier than I expected.",
+      "name": "Placeholder Reviewer 1"
+    },
+    {
+      "quote": "PLACEHOLDER: replace with a real review. My implant looks and feels completely natural. Very happy with the result and the follow-up care.",
+      "name": "Placeholder Reviewer 2"
+    }
+  ]
+}

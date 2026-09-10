@@ -1,0 +1,86 @@
+{
+  "slug": "wisdom-tooth-removal-noida",
+  "name": "Wisdom Tooth Extraction in Noida",
+  "shortName": "Wisdom Tooth Removal",
+  "tagline": "Experience safe and painless wisdom tooth removal with expert care at Ranco Dental in Noida, Sector 141. Our experienced dentists ensure your comfort throughout the process, providing effective solutions for all wisdom tooth-related concerns.",
+  "heroImage": "/images/clinic-pic.jpeg",
+  "heroImageAlt": "Treatment room at Ranco Dental Clinic",
+  "seo": {
+    "title": "Wisdom Tooth Removal in Noida | Pain-Free | Ranco Dental Clinic",
+    "description": "Safe, pain-free wisdom tooth removal in Noida at Ranco Dental. Expert dentists ensure quick recovery with minimal discomfort. Book now!"
+  },
+  "overview": [
+    "Wisdom teeth are the third set of molars that typically emerge between the ages of 17 and 25. While they can be useful for chewing, they commonly cause issues including pain, swelling, or crowding due to improper alignment or insufficient jaw space."
+  ],
+  "overviewImage": "/images/wisdom.jpeg",
+  "overviewImageAlt": "Impacted wisdom tooth pressing against neighboring molars",
+  "reasons": [
+    "Persistent pain or discomfort in the back of your mouth",
+    "Swelling or redness around the gums near the wisdom tooth",
+    "Difficulty opening your mouth or chewing",
+    "Repeated infections or gum disease near the tooth",
+    "Impacted wisdom tooth (trapped under the gum or jawbone)"
+  ],
+  "procedure": [
+    {
+      "title": "Consultation & Examination",
+      "description": "A thorough oral examination, including X-rays, to assess the position of your wisdom tooth."
+    },
+    {
+      "title": "Customized Treatment Plan",
+      "description": "We explain the procedure, address your concerns, and ensure you're comfortable."
+    },
+    {
+      "title": "Painless Extraction",
+      "description": "Using advanced techniques and local anesthesia, our dentists perform a quick and minimally invasive removal."
+    },
+    {
+      "title": "Post-Procedure Care",
+      "description": "Comprehensive guidance on aftercare to promote healing and reduce discomfort."
+    }
+  ],
+  "whyChooseUs": [
+    "Skilled in handling simple and complex wisdom tooth extractions",
+    "State-of-the-art technology for precise diagnosis and painless procedures",
+    "Strict adherence to safety and sterilization protocols",
+    "Convenient location in Noida Sector 141",
+    "Tailored treatments and compassionate support throughout your journey"
+  ],
+  "faqs": [
+    {
+      "question": "When is wisdom tooth extraction necessary?",
+      "answer": "Wisdom tooth extraction is recommended if the tooth is impacted (trapped under the gums or jawbone), causing pain, crowding other teeth, or leading to infections, gum disease, or cysts."
+    },
+    {
+      "question": "Is wisdom tooth extraction painful?",
+      "answer": "No, the procedure is typically painless. At Ranco Dental, we use local anesthesia or sedation to ensure your comfort during the extraction. You may experience mild soreness post-procedure, which can be managed with prescribed medications and aftercare."
+    },
+    {
+      "question": "How long does it take to recover from wisdom tooth extraction?",
+      "answer": "Recovery usually takes about 7–10 days, depending on the complexity of the extraction. Following your dentist's aftercare instructions, such as eating soft foods and avoiding strenuous activities, can speed up the healing process."
+    },
+    {
+      "question": "What are the risks of not removing a problematic wisdom tooth?",
+      "answer": "Ignoring a problematic wisdom tooth can lead to severe issues like infections, tooth decay, gum disease, cyst formation, and misalignment of other teeth."
+    },
+    {
+      "question": "How do I prepare for a wisdom tooth extraction?",
+      "answer": "Before the procedure, inform your dentist about your medical history and any medications you're taking. Follow pre-extraction guidelines, such as fasting (if sedation is required) and arranging for someone to accompany you after the procedure."
+    }
+  ],
+  "doctor": {
+    "name": "Dr. Vaibhav",
+    "specialty": "Oral & Maxillofacial Surgeon, Certified Implantologist",
+    "photo": "/images/doctors/vaibhav.jpg"
+  },
+  "testimonials": [
+    {
+      "quote": "PLACEHOLDER: replace with a real review. My wisdom tooth was impacted and I was dreading the surgery, but it was over quickly and recovery was much easier than I expected.",
+      "name": "Placeholder Reviewer 1"
+    },
+    {
+      "quote": "PLACEHOLDER: replace with a real review. Clear aftercare instructions and the swelling went down within a few days. Would recommend to anyone nervous about the procedure.",
+      "name": "Placeholder Reviewer 2"
+    }
+  ]
+}
