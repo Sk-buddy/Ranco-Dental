@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Figtree, Noto_Sans } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 import StickyActions from "@/components/StickyActions";
 
@@ -60,6 +61,7 @@ export default function RootLayout({
         {children}
         <StickyActions />
       </body>
+      <GoogleTagManager gtmId="GTM-NPFGZZK" />
     </html>
   );
 }
