@@ -53,6 +53,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${figtree.variable} ${notoSans.variable} scroll-smooth`}
     >
       <body className="min-h-screen bg-white text-[var(--color-ink)] antialiased">
