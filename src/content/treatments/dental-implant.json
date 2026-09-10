@@ -72,11 +72,13 @@
   "testimonials": [
     {
       "quote": "Got my dental implant done here and I’m very happy with the overall experience. The doctor explained the entire procedure and guided me through every stage.",
-      "name": "Vikram Sethi"
+      "name": "Vikram Sethi",
+      "rating": 5
     },
     {
       "quote": "Professional treatment from consultation to follow-up. The implant feels natural and I’m really happy with the final result.",
-      "name": "Shreya Nair"
+      "name": "Shreya Nair",
+      "rating": 5
     }
   ]
 }

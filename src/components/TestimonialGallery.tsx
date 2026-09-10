@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { testimonials } from "@/lib/data";
+import StarRating from "./StarRating";
 
 function initials(name: string) {
   return name
@@ -162,9 +163,7 @@ export default function TestimonialGallery() {
           {testimonials.map((t) => (
             <div key={t.name} className="w-[90%] shrink-0 snap-start">
               <figure className="flex h-full flex-col gap-3 rounded-2xl bg-[var(--color-tint)] p-4">
-                <div className="flex items-center gap-1.5 text-[12px] text-[var(--color-teal)]" aria-hidden>
-                  {"★★★★★"}
-                </div>
+                <StarRating rating={t.rating} className="text-[12px]" />
                 <blockquote className="min-h-[72px] text-[13px] leading-[1.55] text-[var(--color-ink)]">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
@@ -222,9 +221,7 @@ export default function TestimonialGallery() {
               style={{ transitionDelay: `${(i % 4) * 90}ms` }}
             >
               <figure className="flex flex-col gap-3 rounded-2xl bg-[var(--color-tint)] p-4 sm:gap-4 sm:p-6">
-                <div className="flex items-center gap-1.5 text-[var(--color-teal)] text-[12px] sm:gap-2 sm:text-base" aria-hidden>
-                  {"★★★★★"}
-                </div>
+                <StarRating rating={t.rating} className="text-[12px] sm:gap-2 sm:text-base" />
                 <blockquote className="text-[13px] leading-[1.55] text-[var(--color-ink)] sm:text-[14px] sm:leading-[1.6]">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>

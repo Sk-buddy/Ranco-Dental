@@ -75,11 +75,13 @@
   "testimonials": [
     {
       "quote": "I was looking for comfortable dentures and the team guided me really well. The fit feels much better and I’m more confident while speaking and eating.",
-      "name": "Sunita Khanna"
+      "name": "Sunita Khanna",
+      "rating": 5
     },
     {
       "quote": "Very happy with my dentures. The doctor took the time to understand my requirements and made sure the fit was comfortable.",
-      "name": "Rajiv Kapoor"
+      "name": "Rajiv Kapoor",
+      "rating": 5
     }
   ]
 }

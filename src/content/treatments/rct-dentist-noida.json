@@ -79,15 +79,18 @@
   "testimonials": [
     {
       "quote": "Had a root canal done by Dr. Neha, and it was a smooth, painless experience. She explained everything clearly and ensured my comfort throughout. The recovery was easy, thanks to her expert care. Highly recommend!",
-      "name": "Ankita Wadhwa"
+      "name": "Ankita Wadhwa",
+      "rating": 5
     },
     {
       "quote": "Had a root canal done here and the whole process was much easier than I expected. The doctor explained every step clearly and the treatment was comfortable.",
-      "name": "Aarav Mehta"
+      "name": "Aarav Mehta",
+      "rating": 5
     },
     {
       "quote": "I was really nervous about getting an RCT, but the treatment was smooth and almost painless. Very professional and reassuring team.",
-      "name": "Priya Sharma"
+      "name": "Priya Sharma",
+      "rating": 5
     }
   ]
 }

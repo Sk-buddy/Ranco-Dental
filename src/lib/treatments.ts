@@ -32,6 +32,8 @@ export type Treatment = {
   testimonials?: {
     quote: string;
     name: string;
+    /** Star rating out of 5, shown above the quote. Defaults to 5 if omitted. */
+    rating?: number;
   }[];
 };
 

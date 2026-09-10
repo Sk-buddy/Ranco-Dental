@@ -119,54 +119,63 @@ export const testimonials = [
   {
     name: "Isha Sharma",
     treatment: "Root Canal Treatment",
+    rating: 5,
     quote:
       "I went for RCT at Ranco dental clinic. Dr. Neha is best in the area. The staff is polite and professional. The painless process was well explained to me. The clinic is budget friendly, clean and well-equipped.",
   },
   {
     name: "Rashmi Tyagi",
     treatment: "Tooth Extraction",
+    rating: 5,
     quote:
       "I had one tooth extraction from Ranco Dental Clinic. I had a perfect experience, Doctor is very accessible, respectful and considerate to patients. I recommend this place to all of my friends for any dental issues.",
   },
   {
     name: "Vishal Arora",
     treatment: "Complex Dental Care",
+    rating: 5,
     quote:
       "I had a positive experience with Dr Neha, Ranco Clinic. She treated and resolved complex dental problem of my mother meticulously. Her planned treatment didn't endure any pain to my mother. I highly recommend to visit Dr. Neha, Ranco Clinic for any dental issues.",
   },
   {
     name: "Ritik Yadav",
     treatment: "General Consultation",
+    rating: 5,
     quote:
       "Dr. Neha Baliyan is very nice doctor. And also an experienced doctor. Dr. Neha mam treated us very well, I express my gratitude to Dr. Neha. Now what can I say next, I am speechless for Dr. Neha Baliyan (Ranco Dental Clinic).",
   },
   {
     name: "Sonu Jaiswal",
     treatment: "General Consultation",
+    rating: 5,
     quote:
       "Dr Neha Baliyan is an excellent dentist, very competent, knowledgeable, hygienic and extremely humble and handles each patient with great attention and care. Wonderful experience and fully satisfied to see their state of art equipment and good staff.",
   },
   {
     name: "Ankita Wadhwa",
     treatment: "Root Canal Treatment",
+    rating: 5,
     quote:
       "Had a root canal done by Dr. Neha, and it was a smooth, painless experience. She explained everything clearly and ensured my comfort throughout. The recovery was easy, thanks to her expert care. Highly recommend!",
   },
   {
     name: "Bertha Kaombe",
     treatment: "Tooth Extraction",
+    rating: 5,
     quote:
       "I highly recommend this dental clinic. Dr Neha is a well experienced dentist... she did my tooth extraction without any pain... if you're looking for a dental clinic around Noida, this is the best place for you!",
   },
   {
     name: "Gaurav Kumar G",
     treatment: "General Consultation",
+    rating: 5,
     quote:
       "Dr Neha is very nice and humble. She listens to the problem and provides treatment accordingly. She gives proper time to her patients. The clinic has all the necessary facilities for dental care, including X-rays. The charges and doctor consultation fees are also nominal and affordable.",
   },
   {
     name: "Bimal Mahato",
     treatment: "Fillings & Scaling",
+    rating: 5,
     quote:
       "Had an excellent experience with tooth fillings and scaling done at this clinic. Dr Neha is a good dentist. The entire procedure was painless and result is great. I would highly recommend Ranco Dental Clinic to anyone in need of oral care and treatment.",
   },
@@ -175,6 +184,7 @@ export const testimonials = [
   {
     name: "Priya Kapoor",
     treatment: "Dental Implants",
+    rating: 5,
     quote:
       "Got a dental implant done here after putting it off for years. The team walked me through every step and the recovery was much easier than I expected. Very happy with the result.",
     isDemo: true,
@@ -182,6 +192,7 @@ export const testimonials = [
   {
     name: "Karan Mehta",
     treatment: "Braces & Aligners",
+    rating: 5,
     quote:
       "Started my aligner treatment at Ranco a few months back and the difference already shows. Clean clinic, friendly staff, and appointments always run on time.",
     isDemo: true,
@@ -189,6 +200,7 @@ export const testimonials = [
   {
     name: "Simran Kaur",
     treatment: "Kids Dentistry",
+    rating: 5,
     quote:
       "My daughter used to be terrified of dentists. The team here was so patient with her that she now actually looks forward to her check-ups. Can't thank them enough.",
     isDemo: true,

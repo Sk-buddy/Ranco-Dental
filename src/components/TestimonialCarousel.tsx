@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import StarRating from "./StarRating";
 
-type Testimonial = { quote: string; name: string };
+type Testimonial = { quote: string; name: string; rating?: number };
 
 function initials(name: string) {
   return name
@@ -71,9 +72,7 @@ export default function TestimonialCarousel({ items }: { items: Testimonial[] })
             key={t.name}
             className="flex h-full w-full shrink-0 snap-center flex-col gap-4 rounded-2xl bg-[var(--color-tint)] p-6 sm:p-8"
           >
-            <div className="flex items-center gap-1.5 text-[var(--color-teal)]" aria-hidden>
-              {"★★★★★"}
-            </div>
+            <StarRating rating={t.rating} />
             <blockquote className="min-h-[110px] text-[15px] leading-[1.7] text-[var(--color-ink)] sm:min-h-[95px] sm:text-[16px]">
               &ldquo;{t.quote}&rdquo;
             </blockquote>

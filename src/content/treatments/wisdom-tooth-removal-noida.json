@@ -76,11 +76,13 @@
   "testimonials": [
     {
       "quote": "I was worried about getting my wisdom tooth removed, but the procedure was handled very professionally. The doctor explained the process and recovery clearly.",
-      "name": "Nikhil Sharma"
+      "name": "Nikhil Sharma",
+      "rating": 5
     },
     {
       "quote": "Smooth experience with my wisdom tooth removal. The team was supportive and the aftercare instructions made recovery much easier.",
-      "name": "Simran Kaur"
+      "name": "Simran Kaur",
+      "rating": 5
     }
   ]
 }

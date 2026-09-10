@@ -76,11 +76,13 @@
   "testimonials": [
     {
       "quote": "Got a crown placed and I’m really pleased with how natural it looks. The entire process was well explained and professionally handled.",
-      "name": "Pooja Agarwal"
+      "name": "Pooja Agarwal",
+      "rating": 5
     },
     {
       "quote": "My bridge looks and feels very natural. The doctor paid attention to the fit and made sure I was comfortable throughout the treatment.",
-      "name": "Aditya Jain"
+      "name": "Aditya Jain",
+      "rating": 5
     }
   ]
 }

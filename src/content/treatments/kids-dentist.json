@@ -83,11 +83,13 @@
   "testimonials": [
     {
       "quote": "My daughter was initially scared of visiting the dentist, but the doctor made her feel completely comfortable. She actually left with a smile!",
-      "name": "Meera Gupta"
+      "name": "Meera Gupta",
+      "rating": 5
     },
     {
       "quote": "Very friendly approach with kids. The treatment was explained patiently and my son felt relaxed throughout the appointment.",
-      "name": "Rahul Bansal"
+      "name": "Rahul Bansal",
+      "rating": 5
     }
   ]
 }
