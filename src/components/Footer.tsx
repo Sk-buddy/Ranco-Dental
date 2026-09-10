@@ -26,18 +26,37 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--color-navy)] pb-20 pt-16 sm:pb-8 sm:pt-20">
+    <footer className="bg-[var(--color-navy)] pb-8 pt-8">
       <div className="container">
-        <div className="flex flex-col items-center gap-6 border-b border-white/10 pb-8 sm:flex-row sm:items-end sm:justify-between">
-          <div className="w-fit rounded-xl bg-white p-3">
-            <Image
-              src="/images/logo.webp"
-              alt="Ranco Dental Clinic"
-              width={400}
-              height={124}
-              className="h-[60px] w-auto"
-            />
+        <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div className="foot-logo-wrap">
+            <div className="w-fit rounded-xl bg-white p-3">
+              <Image
+                src="/images/logo.webp"
+                alt="Ranco Dental Clinic"
+                width={400}
+                height={124}
+                className="h-[60px] w-auto"
+              />
+            </div>
+            <div className="flex items-center gap-3 pt-6">
+              {socialLinks.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-[var(--color-teal)]"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d={s.path} />
+                  </svg>
+                </a>
+              ))}
+            </div>
           </div>
+      
           {/* <a
             href={clinic.whatsappHref}
             target="_blank"
@@ -46,29 +65,17 @@ export default function Footer() {
           >
             Book Appointment
           </a> */}
-          <div className="flex items-center gap-3">
-            {socialLinks.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={s.label}
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-[var(--color-teal)]"
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d={s.path} />
-                </svg>
-              </a>
-            ))}
-          </div>
-        </div>
 
-        <div className="flex flex-col-reverse items-center gap-4 pt-6 sm:flex-row sm:justify-between">
           <p className="text-[13px] text-[var(--color-muted-navy)]">
             © {new Date().getFullYear()} Ranco Dental. All Rights Reserved.
           </p>
         </div>
+
+        {/* <div className="flex items-center gap-4 pt-6 justify-center">
+          <p className="text-[13px] text-[var(--color-muted-navy)]">
+            © {new Date().getFullYear()} Ranco Dental. All Rights Reserved.
+          </p>
+        </div> */}
       </div>
     </footer>
   );
