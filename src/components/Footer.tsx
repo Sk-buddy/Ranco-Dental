@@ -38,20 +38,14 @@ export default function Footer() {
               className="h-[60px] w-auto"
             />
           </div>
-          <a
+          {/* <a
             href={clinic.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-[var(--color-teal)] px-7 py-3 text-[14px] font-semibold text-white transition-transform hover:scale-[1.03]"
           >
             Book Appointment
-          </a>
-        </div>
-
-        <div className="flex flex-col-reverse items-center gap-4 pt-6 sm:flex-row sm:justify-between">
-          <p className="text-[13px] text-[var(--color-muted-navy)]">
-            © {new Date().getFullYear()} Ranco Dental. All Rights Reserved.
-          </p>
+          </a> */}
           <div className="flex items-center gap-3">
             {socialLinks.map((s) => (
               <a
@@ -68,6 +62,12 @@ export default function Footer() {
               </a>
             ))}
           </div>
+        </div>
+
+        <div className="flex flex-col-reverse items-center gap-4 pt-6 sm:flex-row sm:justify-between">
+          <p className="text-[13px] text-[var(--color-muted-navy)]">
+            © {new Date().getFullYear()} Ranco Dental. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>
