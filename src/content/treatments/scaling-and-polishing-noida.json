@@ -12,6 +12,8 @@
   "overview": [
     "Scaling and polishing is a routine dental procedure that involves removing plaque, tartar (hardened plaque), and surface stains from your teeth. Scaling focuses on cleaning the areas above and below the gumline while polishing smoothens the tooth surfaces, leaving them shiny and less prone to plaque buildup."
   ],
+  "overviewImage": "/images/scaling.jpeg",
+  "overviewImageAlt": "Dental scaler removing plaque and tartar from teeth",
   "reasons": [
     "Gum disease (gingivitis and periodontitis)",
     "Bad breath (halitosis)",

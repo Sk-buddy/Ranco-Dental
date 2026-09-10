@@ -12,6 +12,8 @@
   "overview": [
     "Root Canal Treatment is a procedure designed to save teeth that are severely infected or decayed. It involves removing the damaged pulp (soft tissue inside the tooth), cleaning and disinfecting the tooth's interior, and sealing it with a dental filling or crown to restore its strength and functionality. This treatment prevents further infection and helps retain your natural tooth."
   ],
+  "overviewImage": "/images/rct.jpeg",
+  "overviewImageAlt": "The four stages of root canal treatment, from infected tooth to restored crown",
   "reasons": [
     "Deep cavities or tooth decay",
     "Cracks or chips in the tooth",

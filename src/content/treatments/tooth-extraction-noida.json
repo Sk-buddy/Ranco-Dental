@@ -12,6 +12,8 @@
   "overview": [
     "Tooth extraction is the process of removing a damaged, decayed, or problematic tooth from its socket in the jawbone. It is typically performed when the tooth cannot be saved through other treatments such as fillings, crowns, or root canals."
   ],
+  "overviewImage": "/images/extraction.jpeg",
+  "overviewImageAlt": "Forceps extracting a tooth from the jawbone",
   "reasons": [
     "Severe tooth decay or damage beyond repair",
     "Impacted wisdom teeth causing pain or crowding",
