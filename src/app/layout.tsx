@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Figtree, Noto_Sans } from "next/font/google";
-import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 import StickyActions from "@/components/StickyActions";
+
+const GTM_ID = "GTM-NPFGZZK";
 
 const figtree = Figtree({
   variable: "--font-figtree",
@@ -90,11 +91,33 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${figtree.variable} ${notoSans.variable} scroll-smooth`}
     >
+      <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`,
+          }}
+        />
+        {/* End Google Tag Manager */}
+      </head>
       <body className="min-h-screen bg-white text-[var(--color-ink)] antialiased">
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         {children}
         <StickyActions />
       </body>
-      <GoogleTagManager gtmId="GTM-NPFGZZK" />
     </html>
   );
 }
