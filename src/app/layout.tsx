@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "Book your appointment at the nearest advanced dental clinic in Noida! 15+ experienced dentists offering services like root canal treatment, scaling, implants, extractions, and more. Serving Noida Sectors 143, 142, 137, and 141.",
     url: siteUrl,
     siteName: "Ranco Dental Clinic Near you: Best Dentist Noida Sector 141",
-    images: ["/images/clinic-pic.jpeg"],
+    images: ["/images/logo.webp"],
     locale: "en_IN",
     type: "website",
   },

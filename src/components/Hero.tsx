@@ -50,7 +50,7 @@ export default function Hero() {
               href={clinic.phoneHref}
               className="flex w-[155px] shrink-0 items-center justify-center rounded-full border border-white/25 py-3 text-[13px] font-semibold text-white transition-colors hover:bg-white/10 sm:w-[220px] sm:py-3.5 sm:text-[14px]"
             >
-              Call {clinic.phone}
+              Call Us
             </a>
           </div>
         </div>

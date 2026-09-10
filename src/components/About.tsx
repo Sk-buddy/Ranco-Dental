@@ -76,9 +76,9 @@ export default function About() {
             </p>
 
             <div className="flex flex-nowrap gap-2 sm:flex-wrap sm:gap-4">
-              <PillCta href={clinic.whatsappHref} tone="teal">
+              {/* <PillCta href={clinic.whatsappHref} tone="teal">
                 Book Appointment
-              </PillCta>
+              </PillCta> */}
               <PillCta href={clinic.whatsappHref} tone="navy">
                 Chat on WhatsApp
               </PillCta>
