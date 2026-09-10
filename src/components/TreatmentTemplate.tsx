@@ -97,10 +97,10 @@ export default function TreatmentTemplate({ treatment }: { treatment: Treatment 
             otherwise-empty white space above the heading */}
         <svg
           aria-hidden
-          viewBox="0 0 24 24"
-          className="pointer-events-none absolute -left-10 -top-10 hidden h-[260px] w-[260px] rotate-[200deg] fill-[var(--color-sky)]/25 lg:block"
+          viewBox="0 0 512 512"
+          className="pointer-events-none absolute -left-6 -top-8 hidden h-[360px] w-[360px] rotate-[135deg] fill-[var(--color-sky)]/25 lg:block"
         >
-          <path d="M12 3.5c-3 0-5.5 2-5.5 5 0 1.8.7 3 1.4 4.3.9 1.7 1.8 3.4 2.1 6.2.1.9.9 1.5 2 1.5s1.9-.6 2-1.5c.3-2.8 1.2-4.5 2.1-6.2.7-1.3 1.4-2.5 1.4-4.3 0-3-2.5-5-5.5-5Z" />
+          <path d="M256 76 C218 76 190 54 151 54 C94 54 55 99 55 161 C55 210 75 249 94 280 C103 295 103 319 103 345 C103 408 117 464 153 475 C183 484 195 455 204 416 C214 372 225 329 256 329 C287 329 298 372 308 416 C317 455 329 484 359 475 C395 464 409 408 409 345 C409 319 409 295 418 280 C437 249 457 210 457 161 C457 99 418 54 361 54 C322 54 294 76 256 76 Z" />
         </svg>
         <div
           aria-hidden
