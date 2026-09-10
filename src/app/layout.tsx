@@ -23,9 +23,9 @@ const siteUrl = "https://rancodental.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Ranco Dental Clinic | Best Dentist in Noida Sector 141",
+  title: "Best Dentist Noida Sector 141 | Ranco Dental Clinic Near you",
   description:
-    "Ranco Dental Clinic in Noida Sector 141 offers expert dental care for all ages: root canal, implants, braces, kids dentistry & smile makeovers. Book your appointment today.",
+    "Book your appointment at the nearest advanced dental clinic in Noida! 15+ experienced dentists offering services like root canal treatment, scaling, implants, extractions, and more. Serving Noida Sectors 143, 142, 137, and 141.",
   keywords: [
     "dentist Noida Sector 141",
     "Ranco Dental Clinic",
@@ -34,11 +34,11 @@ export const metadata: Metadata = {
     "kids dentistry Noida",
   ],
   openGraph: {
-    title: "Ranco Dental Clinic | Best Dentist in Noida Sector 141",
+    title: "Best Dentist Noida Sector 141 | Ranco Dental Clinic Near you",
     description:
-      "Expert dental care for all ages: root canal, implants, braces, kids dentistry & smile makeovers in Noida Sector 141.",
+      "Book your appointment at the nearest advanced dental clinic in Noida! 15+ experienced dentists offering services like root canal treatment, scaling, implants, extractions, and more. Serving Noida Sectors 143, 142, 137, and 141.",
     url: siteUrl,
-    siteName: "Ranco Dental Clinic",
+    siteName: "Ranco Dental Clinic Near you: Best Dentist Noida Sector 141",
     images: ["/images/clinic-pic.jpeg"],
     locale: "en_IN",
     type: "website",
