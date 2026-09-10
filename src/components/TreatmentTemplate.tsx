@@ -93,12 +93,22 @@ export default function TreatmentTemplate({ treatment }: { treatment: Treatment 
 
       {/* Overview */}
       <section className="relative overflow-hidden bg-white py-16 sm:py-24">
-        {/* decorative tooth watermark, bleeding in from the left edge behind the image */}
+        {/* decorative teeth-cluster watermark, bleeding in from the left edge behind the image —
+            three copies of the same tooth silhouette used for the procedure icons, so it reads
+            unmistakably as teeth even at this large, low-opacity scale. */}
         <svg
           aria-hidden
-          viewBox="0 0 24 24"
-          className="pointer-events-none absolute -left-16 top-1/2 hidden h-[420px] w-[420px] -translate-y-1/2 fill-[var(--color-sky)]/25 lg:block"
+          viewBox="0 0 26 28"
+          className="pointer-events-none absolute -left-20 top-1/2 hidden h-[440px] w-[420px] -translate-y-1/2 fill-[var(--color-sky)]/25 lg:block"
         >
+          <path
+            d="M12 3.5c-3 0-5.5 2-5.5 5 0 1.8.7 3 1.4 4.3.9 1.7 1.8 3.4 2.1 6.2.1.9.9 1.5 2 1.5s1.9-.6 2-1.5c.3-2.8 1.2-4.5 2.1-6.2.7-1.3 1.4-2.5 1.4-4.3 0-3-2.5-5-5.5-5Z"
+            transform="translate(3 15) scale(0.55) translate(-12 -12)"
+          />
+          <path
+            d="M12 3.5c-3 0-5.5 2-5.5 5 0 1.8.7 3 1.4 4.3.9 1.7 1.8 3.4 2.1 6.2.1.9.9 1.5 2 1.5s1.9-.6 2-1.5c.3-2.8 1.2-4.5 2.1-6.2.7-1.3 1.4-2.5 1.4-4.3 0-3-2.5-5-5.5-5Z"
+            transform="translate(22 15) scale(0.55) translate(-12 -12)"
+          />
           <path d="M12 3.5c-3 0-5.5 2-5.5 5 0 1.8.7 3 1.4 4.3.9 1.7 1.8 3.4 2.1 6.2.1.9.9 1.5 2 1.5s1.9-.6 2-1.5c.3-2.8 1.2-4.5 2.1-6.2.7-1.3 1.4-2.5 1.4-4.3 0-3-2.5-5-5.5-5Z" />
         </svg>
         <div
