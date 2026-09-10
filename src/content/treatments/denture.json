@@ -1,7 +1,7 @@
 {
   "slug": "denture",
   "name": "Comfortable and Affordable Dentures in Noida",
-  "shortName": "Denture Fitting",
+  "shortName": "Dentures",
   "tagline": "At Ranco Dental, we provide high-quality dentures to restore your smile and improve oral functionality. Located in Noida Sector 141, our expert team ensures a comfortable fit and a natural look, helping you regain confidence and ease in everyday activities like eating and speaking.",
   "heroImage": "/images/clinic-pic.jpeg",
   "heroImageAlt": "Treatment room at Ranco Dental Clinic",
@@ -74,12 +74,12 @@
   },
   "testimonials": [
     {
-      "quote": "PLACEHOLDER: replace with a real review. Needed a full set of dentures and the team made sure they fit perfectly before I left. Eating and speaking feel completely normal again.",
-      "name": "Placeholder Reviewer 1"
+      "quote": "I was looking for comfortable dentures and the team guided me really well. The fit feels much better and I’m more confident while speaking and eating.",
+      "name": "Sunita Khanna"
     },
     {
-      "quote": "PLACEHOLDER: replace with a real review. Very comfortable process, the trial fitting really helped get things right. Happy with how natural they look.",
-      "name": "Placeholder Reviewer 2"
+      "quote": "Very happy with my dentures. The doctor took the time to understand my requirements and made sure the fit was comfortable.",
+      "name": "Rajiv Kapoor"
     }
   ]
 }

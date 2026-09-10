@@ -28,7 +28,7 @@ export default function Footer() {
   return (
     <footer className="bg-[var(--color-navy)] pb-8 pt-8">
       <div className="container">
-        <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <div className="flex flex-col items-center gap-6 pb-6 border-b border-white/10 sm:flex-row sm:items-end sm:justify-between">
           <div className="foot-logo-wrap">
             <div className="w-fit rounded-xl bg-white p-3">
               <Image
@@ -39,7 +39,17 @@ export default function Footer() {
                 className="h-[60px] w-auto"
               />
             </div>
-            <div className="flex items-center gap-3 pt-6">
+          </div>
+      
+          {/* <a
+            href={clinic.whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-[var(--color-teal)] px-7 py-3 text-[14px] font-semibold text-white transition-transform hover:scale-[1.03]"
+          >
+            Book Appointment
+          </a> */}
+          <div className="flex items-center gap-3 pt-6">
               {socialLinks.map((s) => (
                 <a
                   key={s.label}
@@ -55,27 +65,13 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-          </div>
-      
-          {/* <a
-            href={clinic.whatsappHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-[var(--color-teal)] px-7 py-3 text-[14px] font-semibold text-white transition-transform hover:scale-[1.03]"
-          >
-            Book Appointment
-          </a> */}
+        </div>
 
+        <div className="flex items-center gap-4 pt-6 justify-center">
           <p className="text-[13px] text-[var(--color-muted-navy)]">
             © {new Date().getFullYear()} Ranco Dental. All Rights Reserved.
           </p>
         </div>
-
-        {/* <div className="flex items-center gap-4 pt-6 justify-center">
-          <p className="text-[13px] text-[var(--color-muted-navy)]">
-            © {new Date().getFullYear()} Ranco Dental. All Rights Reserved.
-          </p>
-        </div> */}
       </div>
     </footer>
   );
