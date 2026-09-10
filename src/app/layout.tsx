@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Figtree, Noto_Sans } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
@@ -46,6 +46,39 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Dentist Noida Sector 141 | Ranco Dental Clinic Near you",
+    description:
+      "Book your appointment at the nearest advanced dental clinic in Noida! 15+ experienced dentists offering services like root canal treatment, scaling, implants, extractions, and more. Serving Noida Sectors 143, 142, 137, and 141.",
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Ranco Dental Clinic",
+  },
+  other: {
+    "twitter:label1": "Written by",
+    "twitter:data1": "Ranco Dental Clinic",
+    "twitter:label2": "Time to read",
+    "twitter:data2": "3 minutes",
+    "msapplication-navbutton-color": "#0cb9d3",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0cb9d3",
 };
 
 export default function RootLayout({
