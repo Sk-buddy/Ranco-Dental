@@ -65,7 +65,7 @@ export const services = [
     icon: "/images/services/kids.jpg",
     description:
       "A gentle, child-friendly approach to milk teeth, cavities and early orthodontic checks.",
-    href: "https://rancodental.com/",
+    href: "/kids-dentist/",
   },
   {
     slug: "implants",

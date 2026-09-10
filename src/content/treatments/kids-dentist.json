@@ -1,0 +1,93 @@
+{
+  "slug": "kids-dentist",
+  "name": "Trusted Kids Dentistry in Noida for Healthy Smiles",
+  "shortName": "Kids Dentistry",
+  "tagline": "At Ranco Dental, we understand that children require specialized care when it comes to their dental health. Our Kids Dentistry services in Noida Sector 141 are designed to provide a comfortable, fun, and stress-free experience for your child while ensuring optimal oral health and hygiene.",
+  "heroImage": "/images/clinic-pic.jpeg",
+  "heroImageAlt": "Treatment room at Ranco Dental Clinic",
+  "seo": {
+    "title": "Best Dentist Noida Sector 141 | Ranco Dental Clinic Near you",
+    "description": "Book your appointment at the nearest advanced dental clinic in Noida! 15+ experienced dentists offering services like root canal treatment, scaling, implants, extractions, and more. Serving Noida Sectors 143, 142, 137, and 141."
+  },
+  "overview": [
+    "Kids Dentistry, also known as pediatric dentistry, focuses on the dental health and oral development of children from infancy through adolescence. It includes preventive, diagnostic, and therapeutic dental care tailored to address the unique needs of young patients."
+  ],
+  "overviewImage": "/images/kids.jpeg",
+  "overviewImageAlt": "Kids Dentistry at Ranco Dental",
+  "reasons": [
+    "Prevent cavities and tooth decay",
+    "Monitor the proper growth and alignment of teeth",
+    "Educate children about good oral hygiene habits",
+    "Address habits like thumb-sucking or teeth-grinding"
+  ],
+  "procedure": [
+    {
+      "title": "Dental Checkups and Cleanings",
+      "description": "Routine exams and cleanings to maintain oral health."
+    },
+    {
+      "title": "Fluoride Treatments",
+      "description": "Strengthen teeth and prevent cavities."
+    },
+    {
+      "title": "Dental Sealants",
+      "description": "Protect the chewing surfaces of molars from decay."
+    },
+    {
+      "title": "Cavity Treatment",
+      "description": "Fillings and restorations for decayed teeth."
+    },
+    {
+      "title": "Space Maintainers",
+      "description": "Preserve the space for permanent teeth if baby teeth are lost early."
+    },
+    {
+      "title": "Emergency Dental Care",
+      "description": "Prompt care for dental injuries or pain."
+    }
+  ],
+  "whyChooseUs": [
+    "Friendly and experienced pediatric dentists",
+    "A child-friendly clinic environment",
+    "Focus on preventive and minimally invasive care",
+    "Customized treatment plans for each child",
+    "Convenient location in Noida Sector 141 with flexible scheduling options"
+  ],
+  "faqs": [
+    {
+      "question": "At what age should my child first see a dentist?",
+      "answer": "The first dental visit is recommended by the time your child turns one or within six months of the first tooth appearing."
+    },
+    {
+      "question": "How often should my child visit the dentist?",
+      "answer": "Routine checkups are recommended every six months to monitor and maintain oral health."
+    },
+    {
+      "question": "Is fluoride safe for children?",
+      "answer": "Yes, fluoride is safe and helps strengthen teeth. Our dentists ensure the appropriate amount is used."
+    },
+    {
+      "question": "How can I prevent cavities in my child’s teeth?",
+      "answer": "Encourage proper brushing and flossing habits, limit sugary snacks, and schedule regular dental visits."
+    },
+    {
+      "question": "What should I do if my child’s tooth is knocked out?",
+      "answer": "Keep the tooth moist in milk or saline and visit our clinic immediately for emergency care."
+    }
+  ],
+  "doctor": {
+    "name": "Dr. Neha Baliyan",
+    "specialty": "Dental Surgeon & Implantologist",
+    "photo": "/images/doctors/neha-baliyan.jpg"
+  },
+  "testimonials": [
+    {
+      "quote": "PLACEHOLDER: replace with a real review. Took my daughter for her first dental checkup and the staff made her feel so comfortable. No tears, no fuss, and she's actually excited for her next visit!",
+      "name": "Placeholder Reviewer 1"
+    },
+    {
+      "quote": "PLACEHOLDER: replace with a real review. My son needed a filling and was really nervous, but the dentist was so patient and gentle with him. Highly recommend for anyone with young kids.",
+      "name": "Placeholder Reviewer 2"
+    }
+  ]
+}
