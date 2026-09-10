@@ -31,8 +31,21 @@ function ChecklistGrid({ items }: { items: string[] }) {
 }
 
 export default function TreatmentTemplate({ treatment }: { treatment: Treatment }) {
-  const { name, shortName, tagline, heroImage, overview, reasons, procedure, whyChooseUs, faqs, doctor, testimonials } =
-    treatment;
+  const {
+    name,
+    shortName,
+    tagline,
+    heroImage,
+    overview,
+    overviewImage,
+    overviewImageAlt,
+    reasons,
+    procedure,
+    whyChooseUs,
+    faqs,
+    doctor,
+    testimonials,
+  } = treatment;
 
   return (
     <>
@@ -109,8 +122,8 @@ export default function TreatmentTemplate({ treatment }: { treatment: Treatment 
 
           <div className="relative mx-auto aspect-[3/2] w-full overflow-hidden rounded-[28px] lg:mx-0 lg:ml-auto">
             <Image
-              src="/images/hero-2.jpg"
-              alt="Dentist examining a patient at Ranco Dental Clinic"
+              src={overviewImage || "/images/hero-2.jpg"}
+              alt={overviewImageAlt || "Dentist examining a patient at Ranco Dental Clinic"}
               fill
               sizes="(min-width: 1024px) 45vw, 90vw"
               className="object-cover object-[center_30%]"

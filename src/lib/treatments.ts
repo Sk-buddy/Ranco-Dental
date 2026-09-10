@@ -14,6 +14,9 @@ export type Treatment = {
     description: string;
   };
   overview: string[];
+  /** Photo shown beside the overview text. Optional — falls back to a shared default. */
+  overviewImage?: string;
+  overviewImageAlt?: string;
   /** Short bullet answers to "why do you need this treatment" (signs/reasons). */
   reasons: string[];
   procedure?: { title: string; description: string }[];
