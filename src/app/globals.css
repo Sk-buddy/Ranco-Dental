@@ -92,14 +92,16 @@ h4 {
   font-family: var(--font-serif), Georgia, serif;
 }
 
-/* One deliberate motion moment: counters animating up + hero image cross-fade. */
+/* One deliberate motion moment: counters animating up + hero image cross-fade.
+   Three equal thirds (each image holds, fades out, stays hidden through the
+   other two, then fades back in) — staggered via animation-delay in Hero.tsx. */
 @keyframes crossfade {
   0%,
-  45% {
+  28% {
     opacity: 1;
   }
-  50%,
-  95% {
+  33.3%,
+  96.7% {
     opacity: 0;
   }
   100% {

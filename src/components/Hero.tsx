@@ -2,8 +2,9 @@ import Image from "next/image";
 import { clinic } from "@/lib/data";
 
 const heroImages = [
-  { src: "/images/hero-1.webp", alt: "Dr. Neha Baliyan at Ranco Dental Clinic" },
-  { src: "/images/hero-2.jpg", alt: "Dentist examining a patient at Ranco Dental Clinic" },
+  { src: "/images/banner-1.jpeg", alt: "Dentist performing a procedure at Ranco Dental Clinic" },
+  { src: "/images/banner-2.jpeg", alt: "Dentist treating a patient at Ranco Dental Clinic" },
+  { src: "/images/banner-3.jpeg", alt: "Dentist with a young patient at Ranco Dental Clinic" },
 ];
 
 export default function Hero() {
@@ -65,8 +66,8 @@ export default function Hero() {
               fill
               priority={i === 0}
               sizes="(min-width: 1024px) 45vw, 90vw"
-              className="animate-[crossfade_11s_ease-in-out_infinite] object-contain"
-              style={{ animationDelay: i === 0 ? "0s" : "-5.5s" }}
+              className="animate-[crossfade_18s_ease-in-out_infinite] object-contain"
+              style={{ animationDelay: `${i * -6}s` }}
             />
           ))}
           <div className="pointer-events-none absolute inset-0 rounded-[20px] ring-1 ring-inset ring-white/15" />
