@@ -2,6 +2,7 @@ import Image from "next/image";
 import { clinic } from "@/lib/data";
 
 const heroImages = [
+  { src: "/images/ranco-team.webp", alt: "Ranco dental team at clinic" },
   { src: "/images/banner-1.jpeg", alt: "Dentist performing a procedure at Ranco Dental Clinic" },
   { src: "/images/banner-2.jpeg", alt: "Dentist treating a patient at Ranco Dental Clinic" },
   { src: "/images/banner-3.jpeg", alt: "Dentist with a young patient at Ranco Dental Clinic" },
