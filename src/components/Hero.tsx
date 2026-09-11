@@ -67,8 +67,8 @@ export default function Hero() {
               fill
               priority={i === 0}
               sizes="(min-width: 1024px) 45vw, 90vw"
-              className="animate-[crossfade_18s_ease-in-out_infinite] object-contain"
-              style={{ animationDelay: `${i * -6}s` }}
+              className="animate-[crossfade_12s_ease-in-out_infinite] object-contain"
+              style={{ animationDelay: `${i * -3}s` }}
             />
           ))}
           <div className="pointer-events-none absolute inset-0 rounded-[20px] ring-1 ring-inset ring-white/15" />

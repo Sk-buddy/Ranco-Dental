@@ -93,15 +93,18 @@ h4 {
 }
 
 /* One deliberate motion moment: counters animating up + hero image cross-fade.
-   Three equal thirds (each image holds, fades out, stays hidden through the
-   other two, then fades back in) — staggered via animation-delay in Hero.tsx. */
+   Four equal quarters (each image holds, fades out, stays hidden through the
+   other three, then fades back in) — staggered via animation-delay in Hero.tsx.
+   Keep this at 100/N per image, and the animation duration in Hero.tsx at
+   N times the per-image delay, if the number of hero images ever changes —
+   otherwise images land on the same phase and hide behind each other. */
 @keyframes crossfade {
   0%,
-  28% {
+  21% {
     opacity: 1;
   }
-  33.3%,
-  96.7% {
+  25%,
+  96% {
     opacity: 0;
   }
   100% {
